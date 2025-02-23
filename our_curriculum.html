@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preschool - Kids Education Center">
+    <meta name="theme-color" content="#ffca00">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Preschool</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+
+    <script src="parallax.js" defer></script>
+    <script src="scroll-animations.js" defer></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <style>
+        .custom-font {
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+
+        /* Fix horizontal scroll issue */
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        .bg-palms-pattern {
+            background-image: url('http://192.168.1.23:8080/img/Home/Palms_Transparent_Pattern.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <style>
+        .course-image {
+            transition: transform 2s ease-in-out;
+        }
+
+        .course-image:hover {
+            transform: scale(1.1) rotate(12deg);
+        }
+
+        .perspective {
+            perspective: 1000px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Mobile menu button -->
+    <header id="header" class="fixed top-0 left-0 w-full bg-white py-4 shadow-md transition-all duration-300">
+        <div class="container mx-auto flex items-center justify-center gap-12 px-6">
+            <!-- Logo -->
+            <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-20 h-20">
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="flex space-x-6 text-orange-500 font-semibold text-base">
+                    <li><a href="index.html"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Home</a></li>
+                    <li><a href="our_program.html"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
+                            Program</a>
+                    </li>
+                    <li><a href="our_promise.html"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
+                            Promise</a></li>
+                    <li><a href="our_classroom.html"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
+                            Classroom</a></li>
+                    <li><a href="our_curriculum.html"
+                            class="text-orange-700 underline decoration-2 underline-offset-4">Our
+                            Curriculum</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Blog</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Contact Us</a>
+                    </li>
+                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">APPLY
+                            NOW</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <div class="w-full h-20 bg-white"></div>
+
+
+
+
+    <main>
+        <section class="w-full h-[350px] bg-cover bg-center relative flex items-center justify-center text-white"
+            style="background-image: url('img/home/gallery/gallery6.jpg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative text-center">
+                <h1 class="text-4xl font-bold">Our Curriculum</h1>
+                <nav class="mt-2 text-sm">
+                    <a href="index.html" class="text-gray-300 hover:text-white">HOME</a>
+                    <span class="mx-2 text-gray-400">|</span>
+                    <span class="text-white">Our Curriculum</span>
+                </nav>
+            </div>
+        </section>
+
+
+        <section class="w-full py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <!-- Tabs -->
+                <div class="flex space-x-4 justify-center mb-8">
+                    <button class="tab-button active px-6 py-2 bg-blue-500 text-white rounded-md"
+                        data-category="all">Infant/Toddler</button>
+                    <button class="tab-button px-6 py-2 bg-gray-200 text-gray-800 rounded-md"
+                        data-category="Preschool">Preschool</button>
+                    <button class="tab-button px-6 py-2 bg-gray-200 text-gray-800 rounded-md"
+                        data-category="Kindergarten">Kindergarten</button>
+                    <button class="tab-button px-6 py-2 bg-gray-200 text-gray-800 rounded-md"
+                        data-category="Enrichment">Enrichment</button>
+                </div>
+
+                <!-- Course Grid -->
+                <div id="course-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Courses will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Template -->
+        <template id="course-template">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform duration-[2000ms] ease-in-out hover:shadow-xl group">
+                <!-- Image Wrapper -->
+                <div class="overflow-hidden relative w-full h-64 perspective">
+                    <img src="" alt=""
+                        class="course-image w-full h-full object-cover object-center transition-transform duration-[2000ms] ease-in-out group-hover:scale-110 group-hover:rotate-12">
+                </div>
+        
+                <!-- Course Info -->
+                <div class="p-6 text-center">
+                    <!-- Date -->
+                    <p class="text-gray-400 text-xs mb-2 course-date"></p>
+        
+                    <!-- Title -->
+                    <h3 class="text-lg font-bold text-gray-900 course-title"></h3>
+        
+                    <!-- Description -->
+                    <p class="text-sm text-gray-600 mt-1 course-description"></p>
+        
+                    <!-- Divider -->
+                    <div class="border-t border-gray-300 my-4"></div>
+        
+                    <!-- Class Details -->
+                    <div class="flex justify-between text-gray-500 text-sm">
+                        <div>
+                            <span class="block uppercase text-xs font-semibold text-gray-400">Year Olds</span>
+                            <span class="text-blue-500 font-semibold course-age"></span>
+                        </div>
+                        <div>
+                            <span class="block uppercase text-xs font-semibold text-gray-400">Class Size</span>
+                            <span class="text-gray-900 font-semibold course-size"></span>
+                        </div>
+                        <div>
+                            <span class="block uppercase text-xs font-semibold text-gray-400">Price</span>
+                            <span class="text-blue-500 font-semibold course-price"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <h2>Kids School</h2>
+                    <p>Email</p>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectet adip elit sed do eiusmod tempor.</p>
+                <div class="contact-info">
+                    <p><i class="fa fa-map-marker"></i> Office Box 97845 Baker street 567 Los- Angeles, Clifornia, US.
+                    </p>
+                    <p><i class="fa fa-envelope"></i> Support@preschool.com</p>
+                    <p><i class="fa fa-phone"></i> 1.800.123.4567 - 1.800.123.4566</p>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Latest Courses</h3>
+                <div class="latest-courses">
+                    <div class="course-item">
+                        <p>Drawing, Painting Lessons</p>
+                        <span>May 10, 2019</span>
+                    </div>
+                    <div class="course-item">
+                        <p>HTML5 & CSS3 Lessons</p>
+                        <span>May 10, 2019</span>
+                    </div>
+                    <div class="course-item">
+                        <p>How To Use Computer</p>
+                        <span>May 10, 2019</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Social Media</h3>
+                <div class="social-links">
+                    <a href="#" class="instagram">Instagram</a>
+                    <a href="#" class="twitter">Twitter Feeds</a>
+                </div>
+            </div>
+        </div>
+        <div class="lst">
+            <p>© 2024 Preschool. Developed by JWSThemes. All rights reserved.</p>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="optimizations.js" defer></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let courses = [];
+
+            // Load Courses from JSON
+            fetch("courses.json")
+                .then(response => response.json())
+                .then(data => {
+                    courses = data;
+                    displayCourses("all"); // Show all classes initially
+                });
+
+            // Function to Display Courses
+            function displayCourses(category) {
+                const container = document.getElementById("course-container");
+                container.innerHTML = ""; // Clear existing courses
+
+                const filteredCourses = category === "all"
+                    ? courses
+                    : courses.filter(course => course.category === category);
+
+                const template = document.getElementById("course-template");
+
+                filteredCourses.forEach(course => {
+                    const clone = template.content.cloneNode(true);
+
+                    clone.querySelector(".course-image").src = course.image;
+                    clone.querySelector(".course-image").alt = course.title;
+                    clone.querySelector(".course-date").textContent = course.date;
+                    clone.querySelector(".course-title").textContent = course.title;
+                    clone.querySelector(".course-description").textContent = course.description;
+                    clone.querySelector(".course-age").textContent = course.age_range;
+                    clone.querySelector(".course-size").textContent = course.class_size;
+                    clone.querySelector(".course-price").textContent = course.price;
+
+                    container.appendChild(clone);
+                });
+            }
+
+            // Handle Tab Clicks
+            document.querySelectorAll(".tab-button").forEach(button => {
+                button.addEventListener("click", function () {
+                    // Remove active class from all buttons
+                    document.querySelectorAll(".tab-button").forEach(btn => {
+                        btn.classList.remove("bg-blue-500", "text-white");
+                        btn.classList.add("bg-gray-200", "text-gray-800");
+                    });
+
+                    // Add active class to the clicked button
+                    this.classList.add("bg-blue-500", "text-white");
+                    this.classList.remove("bg-gray-200", "text-gray-800");
+
+                    displayCourses(this.dataset.category);
+                });
+            });
+        });
+
+    </script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper-config.js"></script>
+
+
+</body>
+
+</html>

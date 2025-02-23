@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "category": "Preschool",
+        "title": "Alphabet Matching Class",
+        "date": "April 29, 2016",
+        "age_range": "2 - 5",
+        "class_size": "26",
+        "price": "$69 m/h",
+        "image": "img/ourclasses/sports.jpg",
+        "description": "Kindergarten, Primary, Stories"
+    },
+    {
+        "id": 2,
+        "category": "Kindergarten",
+        "title": "Color Matching Class",
+        "date": "April 29, 2016",
+        "age_range": "3 - 6",
+        "class_size": "26",
+        "price": "$49 m/h",
+        "image": "img/ourclasses/44-370x270.jpg",
+        "description": "Kindergarten, Primary, Stories"
+    },
+    {
+        "id": 3,
+        "category": "Enrichment",
+        "title": "Creative Class",
+        "date": "April 29, 2016",
+        "age_range": "3 - 6",
+        "class_size": "26",
+        "price": "$59 m/h",
+        "image": "img/ourclasses/31-370x270.jpg",
+        "description": "Games, Kindergarten, Sports"
+    }
+]

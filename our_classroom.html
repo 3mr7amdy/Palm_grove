@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preschool - Kids Education Center">
+    <meta name="theme-color" content="#ffca00">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Preschool</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+
+    <script src="parallax.js" defer></script>
+    <script src="scroll-animations.js" defer></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <style>
+        .custom-font {
+            font-family: 'Luckiest Guy', cursive;
+        }
+
+
+        /* Fix horizontal scroll issue */
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        .bg-palms-pattern {
+            background-image: url('http://192.168.1.23:8080/img/Home/Palms_Transparent_Pattern.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Mobile menu button -->
+    <header id="header" class="fixed top-0 left-0 w-full bg-white py-4 shadow-md transition-all duration-300">
+        <div class="container mx-auto flex items-center justify-center gap-12 px-6">
+            <!-- Logo -->
+            <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-20 h-20">
+
+            <!-- Navigation -->
+            <nav>
+                <ul class="flex space-x-6 text-orange-500 font-semibold text-base">
+                    <li><a href="index.html"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Home</a></li>
+                    <li><a href="our_program.html"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
+                            Program</a>
+                    </li>
+                    <li><a href="our_promise.html"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
+                            Promise</a></li>
+                    <li><a href="our_classroom.html"
+                            class="text-orange-700 underline decoration-2 underline-offset-4">Our
+                            Classroom</a></li>
+
+
+                    <li><a href="our_curriculum.html"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
+                            Curriculum</a></li>
+
+                    <li><a href="#"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Blog</a></li>
+                    <li><a href="#"
+                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Contact Us</a>
+                    </li>
+                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">APPLY
+                            NOW</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <div class="w-full h-20 bg-white"></div>
+
+
+
+
+    <main>
+
+        <section class="w-full pb-0 bg-gray-100 relative">
+            <!-- Swiper Slider -->
+            <div class="swiper-container w-full relative">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div
+                        class="swiper-slide flex items-center justify-start w-full h-[500px] bg-white shadow-lg relative">
+                        <!-- Background Image -->
+                        <div class="absolute inset-0">
+                            <img src="img/home/gallery/gallery2.jpg" alt="Preschool" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Text Content (Left Side) -->
+                        <div class="relative w-1/2 p-10 text-left text-white z-10">
+                            <!-- Animated Text -->
+                            <h3 class="text-4xl font-bold text-white fade-in-top">Welcome to</h3>
+                            <h2 class="text-5xl font-bold text-orange-500 mt-2 typing-animation">Our Classroom</h2>
+
+                            <!-- Animated Underline -->
+                            <div class="w-40 h-1 bg-orange-500 mt-3 fade-in-line"></div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide flex items-center justify-center w-full h-[500px] bg-white shadow-lg">
+                        <div class="w-1/2 p-10">
+                            <h3 class="text-3xl font-bold text-blue-500">After School Program</h3>
+                            <p class="text-gray-600 mt-4">Fun and engaging activities for kids after school hours.</p>
+                            <ul class="mt-6 text-gray-500 space-y-3">
+                                <li>✅ Creative Arts</li>
+                                <li>✅ STEM Activities</li>
+                                <li>✅ Outdoor Play</li>
+                            </ul>
+                        </div>
+                        <div class="w-1/2">
+                            <img src="img/home/gallery/gallery1.jpg" alt="After School"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide flex items-center justify-center w-full h-[500px] bg-white shadow-lg">
+                        <div class="w-1/2 p-10">
+                            <h3 class="text-3xl font-bold text-green-500">Summer Camp</h3>
+                            <p class="text-gray-600 mt-4">An exciting summer program filled with exploration and fun.
+                            </p>
+                            <ul class="mt-6 text-gray-500 space-y-3">
+                                <li>✅ Outdoor Adventures</li>
+                                <li>✅ Science Experiments</li>
+                                <li>✅ Music & Dance</li>
+                            </ul>
+                        </div>
+                        <div class="w-1/2">
+                            <img src="img/home/gallery/gallery3.jpg" alt="Summer Camp"
+                                class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- Pagination Dots (Fixed Position) -->
+                <div class="swiper-pagination absolute bottom-[-50px] left-1/2 transform -translate-x-1/2"></div>
+            </div>
+        </section>
+
+        <!-- Sky Blue Section -->
+        <div class="w-full bg-sky-500 text-white py-6 px-10 flex items-center justify-center gap-6">
+            <!-- Text (Centered) -->
+            <p class="text-2xl font-semibold flex-1 text-center">
+                We love walk-throughs with parents, and sharing our vision in person!
+            </p>
+
+            <!-- Button -->
+            <a href="#"
+                class="bg-orange-500 text-white px-6 py-3 font-bold rounded-lg shadow-md hover:bg-orange-600 transition duration-300">
+                Book a Visit
+            </a>
+        </div>
+
+
+
+
+
+
+
+        <section class="w-full py-16 bg-white relative">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center relative">
+
+                <!-- Left Content (Title & Image) -->
+                <div class="w-full lg:w-1/2 flex flex-col relative z-10 translate-x-[12.5%]">
+                    <h2 class="text-4xl font-bold text-gray-900">Learning Zones</h2>
+                    <a href="#" class="text-blue-500 font-semibold text-lg flex items-center mt-3 hover:underline">
+                        ➝ Visit Us
+                    </a>
+
+                    <!-- Image (Below the Text) -->
+                    <div class="w-full mt-10 rounded-lg overflow-hidden shadow-lg">
+                        <img src="img/ourclasses/img_about-1.png" alt="Kids Learning"
+                            class="w-full h-[400px] object-cover rounded-lg">
+                    </div>
+                </div>
+
+                <!-- Right Content (Image & Text) - Shifted Left by 12.5% -->
+                <div class="w-full lg:w-1/2 flex flex-col -translate-x-[12.5%] relative z-0">
+                    <!-- Image (Top) -->
+                    <div class="w-full rounded-lg overflow-hidden shadow-lg mt-0"> <!-- Added mt-0 -->
+                        <img src="img/ourclasses/img_about-2.png" alt="Classroom"
+                            class="w-full h-[400px] object-cover rounded-lg">
+                    </div>
+
+                    <!-- Paragraph (Indented to Start After 25%, including border) -->
+                    <div class="mt-6 border-l-2 border-blue-500 pl-3 ml-[30%]">
+                        <p class="text-gray-600 text-xs">
+                            Our learning zones feature three dynamic prepared environments, with thoughtfully designed
+                            activities placed on our shelving units, to foster exploration, independence, and
+                            collaboration. These interconnected spaces allow for seamless transitions between
+                            skill-based activities and multi-age group interactions.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+        <section class="relative w-full h-[600px] bg-cover bg-center"
+            style="background-image: url('img/home/gallery/gallery4.jpg');">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+            <!-- Content Container -->
+            <div class="relative max-w-6xl mx-auto px-6 flex flex-col justify-center h-full">
+
+                <!-- Title Speech Bubble -->
+                <div
+                    class="absolute top-8 right-10 flex items-center justify-center w-64 h-24 bg-white border-2 border-orange-500 rounded-full shadow-lg">
+                    <!-- Main Text -->
+                    <span class="text-orange-500 text-2xl font-bold">Activities</span>
+
+                    <!-- Underline & Icon -->
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center">
+                        <span class="w-6 h-[2px] bg-orange-500 mx-2"></span>
+                        <i class="fas fa-heartbeat text-orange-500"></i>
+                        <span class="w-6 h-[2px] bg-orange-500 mx-2"></span>
+                    </div>
+
+                    <!-- Small Bubbles -->
+                    <div class="absolute -bottom-3 left-8 w-5 h-5 bg-white border-2 border-orange-500 rounded-full">
+                    </div>
+                    <div class="absolute -bottom-6 left-3 w-3 h-3 bg-white border-2 border-orange-500 rounded-full">
+                    </div>
+                    <div class="absolute -bottom-8 left-1 w-2 h-2 bg-white border-2 border-orange-500 rounded-full">
+                    </div>
+                </div>
+
+
+
+
+                <!-- Activities List -->
+                <div class="space-y-10">
+                    <!-- Activity 1 -->
+                    <div
+                        class="relative w-[50%] bg-white bg-opacity-20 border border-dashed border-white rounded-lg p-6  shadow-lg text-white transition-all duration-300 hover:bg-blue-500 hover:bg-opacity-30 hover:border-blue-500">
+                        <div class="flex items-center gap-4">
+                            <!-- Icon -->
+                            <div
+                                class="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full border-2 border-white bg-transparent ">
+
+                                <i class="fas fa-child-reaching text-2xl"></i>
+
+                            </div>
+                            <!-- Text -->
+                            <div>
+                                <h3 class="text-xl font-bold">Practical Life Skills</h3>
+                                <p class="text-sm">activities like pouring, sorting, and buttoning, designed to develop
+                                    fine motor skills, concentration, and independence.</p>
+                            </div>
+                        </div>
+                        <!-- Number (Top Right, Inside Border) -->
+                        <span class="absolute -top-7 right-7 text-5xl font-bold text-white">
+                            1
+                        </span>
+                    </div>
+
+                    <!-- Activity 2 -->
+                    <div
+                        class="relative w-[50%] bg-white bg-opacity-20 border border-dashed border-white rounded-lg p-6  shadow-lg text-white transition-all duration-300 hover:bg-blue-500 hover:bg-opacity-30 hover:border-blue-500 ml-20">
+                        <div class="flex items-center gap-4">
+                            <!-- Icon -->
+                            <div
+                                class="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full border-2 border-white bg-transparent ">
+
+                                <i class="fas fa-palette text-2xl"></i>
+                            </div>
+                            <!-- Text -->
+                            <div>
+                                <h3 class="text-xl font-bold">Sensorial Exploration</h3>
+                                <p class="text-sm">Color tablets, sound cylinders, and texture boards that engage the
+                                    senses, help refine children’s sensory perception.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Number -->
+                        <span class="absolute -top-7 right-7 text-5xl font-bold text-white">
+                            2
+                        </span>
+                    </div>
+
+                    <!-- Activity 3 -->
+                    <div
+                        class="relative w-[50%] bg-white bg-opacity-20 border border-dashed border-white rounded-lg p-6  shadow-lg text-white transition-all duration-300 hover:bg-blue-500 hover:bg-opacity-30 hover:border-blue-500 ml-40">
+                        <div class="flex items-center gap-4">
+                            <!-- Icon -->
+                            <div
+                                class="w-16 h-16 flex-shrink-0 flex items-center justify-center rounded-full border-2 border-white bg-transparent ">
+
+                                <i class="fas fa-plus-minus text-2xl"></i>
+                            </div>
+                            <!-- Text -->
+                            <div>
+                                <h3 class="text-xl font-bold">Mathematics and Geometry</h3>
+                                <p class="text-sm">Number rods, bead frames, and geometric solids, allow children to
+                                    explore basic math concepts like counting, addition, and shapes.
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Number -->
+                        <span class="absolute -top-7 right-7 text-5xl font-bold text-white">
+                            3
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="w-full py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
+
+                <!-- Left Side: Text & Countdown -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <h2 class="text-4xl font-bold text-gray-900">Upcoming Event</h2>
+                    <div class="w-16 h-[2px] bg-blue-500 my-3 mx-auto lg:mx-0"></div>
+                    <p class="text-gray-600">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+
+                    <!-- Countdown Timer -->
+                    <div class="flex justify-center lg:justify-start items-center gap-6 mt-6">
+                        <div
+                            class="relative flex flex-col items-center justify-center w-28 h-20 border-2 border-dashed border-orange-500 rounded-full">
+                            <span class="text-3xl font-bold text-blue-500">00</span>
+                            <span class="text-sm font-semibold text-blue-500">Days</span>
+                        </div>
+                        <div
+                            class="relative flex flex-col items-center justify-center w-28 h-20 border-2 border-dashed border-orange-500 rounded-full">
+                            <span class="text-3xl font-bold text-blue-500">00</span>
+                            <span class="text-sm font-semibold text-blue-500">Hours</span>
+                        </div>
+                        <div
+                            class="relative flex flex-col items-center justify-center w-28 h-20 border-2 border-dashed border-orange-500 rounded-full">
+                            <span class="text-3xl font-bold text-blue-500">00</span>
+                            <span class="text-sm font-semibold text-blue-500">Minutes</span>
+                        </div>
+                        <div
+                            class="relative flex flex-col items-center justify-center w-28 h-20 border-2 border-dashed border-orange-500 rounded-full">
+                            <span class="text-3xl font-bold text-blue-500">00</span>
+                            <span class="text-sm font-semibold text-blue-500">Seconds</span>
+                        </div>
+                    </div>
+
+                    <!-- Learn More Button -->
+                    <div class="mt-6 flex items-center gap-4">
+                        <a href="#"
+                            class="bg-orange-500 text-white px-6 py-3 font-bold rounded-full shadow-md hover:bg-orange-600 transition duration-300">
+                            LEARN MORE
+                        </a>
+                        <span class="text-gray-600 font-semibold">AUGUST 20, 2023 | 4:30 PM</span>
+                    </div>
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="w-full lg:w-1/2">
+                    <img src="img/ourclasses/bg-event.png" alt="Upcoming Event" class="w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="w-full relative bg-white" style="background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 60%, white 40%), 
+        url('img/home/gallery/gallery6.jpg') no-repeat center top; background-size: cover;">
+
+            <div class="relative max-w-6xl mx-auto px-6 py-16 text-center">
+                <!-- Section Title -->
+                <h2 class="text-4xl font-bold text-white">Additional Classes</h2>
+
+                <!-- Underline & Icon -->
+                <div class="relative flex justify-center items-center mt-3">
+                    <span class="w-8 h-[2px] bg-white mx-2"></span>
+                    <i class="fas fa-heartbeat text-white text-xl"></i>
+                    <span class="w-8 h-[2px] bg-white mx-2"></span>
+                </div>
+
+                <!-- Section Content -->
+                <div class="relative container mx-auto px-6 py-16">
+                    <!-- Timeline (Center Line) -->
+                    <div class="absolute w-1 bg-blue-300 h-full left-1/2 transform -translate-x-1/2"></div>
+                
+                    <!-- Class 1 (Left Side, Closer to Center) -->
+                    <div class="mb-16 flex flex-col md:flex-row items-start relative">
+    
+                        <div class="w-full bg-white shadow-lg rounded-lg overflow-hidden p-6 relative">
+                            <!-- Date (Now inside the card and aligned right) -->
+                            <div class="absolute right-0 top-0 bg-white shadow-md px-4 py-2 rounded-full text-gray-800 font-semibold w-fit ml-auto">
+                                April 29, 2025
+                            </div>
+                    
+                            <img src="img/ourclasses/31-370x270.jpg" alt="Letter Math Class" class="w-full h-56 object-cover rounded-lg">
+                            
+                            <div class="mt-4 text-right">  <!-- Align all text to the right -->
+                                <h3 class="text-xl font-semibold text-gray-800">Letter Math Class</h3>
+                                <p class="text-gray-600 text-sm">Kindergarten, Primary, Stories</p>
+                                <div class="mt-4 text-sm text-gray-600">
+                                    <span class="block">Year Olds: <span class="text-blue-500">2-5</span></span>
+                                    <span class="block">Class Size: <span class="text-blue-500">26</span></span>
+                                    <span class="block">Price: <span class="text-blue-500">$49 m/h</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                
+                    <!-- Class 2 (Right Side, Closer to Center) -->
+                    <div class="mb-16 flex flex-col md:flex-row-reverse items-start relative">
+                        <!-- Date (Centered) -->
+                        <div class="absolute left-1/2 -translate-x-1/2 -top-2 bg-white shadow-md px-4 py-2 rounded-full text-gray-800 font-semibold">
+                            May 5, 2025
+                        </div>
+                
+                        <div class="w-full md:w-6/12 lg:w-5/12 bg-white shadow-lg rounded-lg overflow-hidden p-6 mr-auto">
+                            <img src="img/ourclasses/44-370x270.jpg" alt="Sport Games" class="w-full h-56 object-cover rounded-lg">
+                            <div class="mt-4">
+                                <h3 class="text-xl font-semibold text-gray-800">Sport Games</h3>
+                                <p class="text-gray-600 text-sm">Games, Kindergarten, Sports</p>
+                                <div class="mt-4 text-sm text-gray-600">
+                                    <span class="block">Year Olds: <span class="text-blue-500">3-6</span></span>
+                                    <span class="block">Class Size: <span class="text-blue-500">26</span></span>
+                                    <span class="block">Price: <span class="text-blue-500">$59 m/h</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <h2>Kids School</h2>
+                    <p>Email</p>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Lorem ipsum dolor sit amet, consectet adip elit sed do eiusmod tempor.</p>
+                <div class="contact-info">
+                    <p><i class="fa fa-map-marker"></i> Office Box 97845 Baker street 567 Los- Angeles, Clifornia, US.
+                    </p>
+                    <p><i class="fa fa-envelope"></i> Support@preschool.com</p>
+                    <p><i class="fa fa-phone"></i> 1.800.123.4567 - 1.800.123.4566</p>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Latest Courses</h3>
+                <div class="latest-courses">
+                    <div class="course-item">
+                        <p>Drawing, Painting Lessons</p>
+                        <span>May 10, 2019</span>
+                    </div>
+                    <div class="course-item">
+                        <p>HTML5 & CSS3 Lessons</p>
+                        <span>May 10, 2019</span>
+                    </div>
+                    <div class="course-item">
+                        <p>How To Use Computer</p>
+                        <span>May 10, 2019</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Social Media</h3>
+                <div class="social-links">
+                    <a href="#" class="instagram">Instagram</a>
+                    <a href="#" class="twitter">Twitter Feeds</a>
+                </div>
+            </div>
+        </div>
+        <div class="lst">
+            <p>© 2024 Preschool. Developed by JWSThemes. All rights reserved.</p>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="optimizations.js" defer></script>
+
+    <script>
+        // Program descriptions
+        const programDescriptions = [
+            "In our infant program, we create a nurturing environment where babies are encouraged to explore the world around them through their senses. Guided by the Montessori principle of the Absorbent Mind, infants naturally absorb language, movement, and emotional connections, laying the foundation for future learning. Every detail of the space is thoughtfully designed to support their development, fostering trust, security, and early independence.",
+
+            "Our toddler program focuses on harnessing the Sensitive Periods of language, movement, and socialization, providing opportunities for exploration and self-discovery. In a carefully prepared environment, toddlers engage in hands-on activities that promote practical life skills, like dressing, feeding, and cleaning, empowering them to take pride in their abilities. With a focus on the Control of Error, children are gently guided to solve problems independently, fostering confidence and autonomy.",
+
+            "At this stage, children are encouraged to deepen their exploration, building foundational academic skills in language, math, and sensory work. Our prepared environment invites children to engage with purposeful activities that foster independence and critical thinking, while practical life exercises teach responsibility and self-sufficiency. During their Sensitive Periods for social development and order, children learn to collaborate and make choices, setting the stage for lifelong learning.",
+
+            "In our school-age program, children continue to grow through self-directed learning in a rich, hands-on environment that prepares them for the next educational steps. Emphasizing practical life skills, critical thinking, and mastery of core academic concepts, they work at their own pace, with built-in opportunities for self-correction through the Control of Error. As they navigate their learning environment, children build confidence, responsibility, and a deep love of learning that will guide them in both Montessori and traditional school settings.",
+
+            "Our Summer Program for grades 1 through 6 offers a dynamic, hands-on learning experience that blends Montessori principles with fun, interactive activities. Designed to keep children engaged over the summer months, the program emphasizes creativity, exploration, and practical life skills while providing a flexible, student-driven environment. With a focus on building independence, fostering teamwork, and sparking curiosity, our summer sessions offer a refreshing and enriching way for children to continue their educational journey in a relaxed, supportive atmosphere."
+        ];
+
+        function updateContent(index) {
+            document.getElementById("program-text").innerText = programDescriptions[index];
+
+            // Hide all arrows using only elements with the `.arrow-indicator` class
+            document.querySelectorAll(".arrow-indicator").forEach(arrow => {
+                if (!arrow.classList.contains("hidden")) {
+                    arrow.classList.add("hidden");
+                }
+            });
+
+            // Show the selected arrow
+            const selectedArrow = document.getElementById(`arrow-${index}`);
+            if (selectedArrow) {
+                selectedArrow.classList.remove("hidden");
+            }
+        }
+
+        // Set default active button
+        updateContent(0);
+    </script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper-config.js"></script>
+
+
+</body>
+
+</html>
