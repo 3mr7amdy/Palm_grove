@@ -1,22 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-
-    menuToggle?.addEventListener('click', () => {
-        menuToggle.classList.toggle('active');
-        nav.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-            menuToggle.classList.remove('active');
-            nav.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        }
-    });
+   
 
     // Lazy loading images
     const lazyImages = document.querySelectorAll('img[data-src]');

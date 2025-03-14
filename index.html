@@ -11,21 +11,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Preschool</title>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="animations.css">
 
-    <script src="parallax.js" defer></script>
-    <script src="scroll-animations.js" defer></script>
 
 
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
     <style>
         .custom-font {
             font-family: 'Luckiest Guy', cursive;
         }
-
 
         /* Fix horizontal scroll issue */
         html,
@@ -33,8 +38,9 @@
             overflow-x: hidden;
         }
 
+        /* Background Pattern */
         .bg-palms-pattern {
-            background-image: url('http://192.168.1.23:8080img/home/Palms_Transparent_Pattern.png');
+            background-image: url('http://192.168.1.23:8080/img/home/Palms_Transparent_Pattern.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -42,30 +48,73 @@
     </style>
 </head>
 
-<body>
-    <!-- Mobile menu button -->
-    <header id="header" class="fixed top-0 left-0 w-full bg-white shadow-md transition-all duration-300">
-        <div class="container mx-auto flex items-center justify-center gap-12 px-6">
-            <!-- Logo -->
-            <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-20 h-20">
 
-            <!-- Navigation -->
-            <nav>
-                <ul class="flex space-x-6 text-orange-500 font-semibold text-base">
-                    <li><a href="index.html" class="text-orange-700 underline decoration-2 underline-offset-4">Home</a></li>
-                    <li><a href="our_program.html" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our Program</a></li>
-                    <li><a href="our_promise.html" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our Promise</a></li>
-                    <li><a href="our_classroom.html" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our Classroom</a></li>
-                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our Curriculum</a></li>
-                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Blog</a></li>
-                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Contact Us</a></li>
-                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">APPLY NOW</a></li>
-                </ul>
-            </nav>
+<body>
+
+
+    <header id="header" class="fixed top-0 left-0 w-full bg-white py-4 shadow-md transition-all duration-300 z-50">
+        <div class="container mx-auto flex items-center justify-between px-6">
+
+            <!-- Logo (Left on Mobile, Centered with Nav on Desktop) -->
+            <a href="index.html" class="md:hidden">
+                <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-20 h-20 md:w-20 md:h-20">
+            </a>
+
+            <!-- Wrapper for Navigation & Logo (Centered on Desktop) -->
+            <div class="hidden md:flex items-center justify-center w-full space-x-6">
+                <!-- Logo (Visible on Desktop, Inside Navigation) -->
+                <a href="index.html">
+                    <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-16 h-16 md:w-20 md:h-20">
+                </a>
+
+                <nav>
+                    <ul id="nav-menu" class="flex space-x-6 text-orange-500 font-semibold text-base">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="our_program.html" class="nav-link">Our Program</a></li>
+                        <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
+                        <li><a href="our_classroom.html" class="nav-link">Our Classroom</a></li>
+                        <li><a href="our_curriculum.html" class="nav-link">Our Curriculum</a></li>
+                        <li><a href="#" class="nav-link">Blog</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                        <li><a href="#" class="nav-link">APPLY NOW</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!-- Mobile Menu Button (Right on Mobile) -->
+            <button id="menu-toggle" class="md:hidden flex flex-col">
+                <span class="hamburger w-6 h-1 bg-orange-500 block"></span>
+                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+            </button>
+            
             
         </div>
 
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+            <ul class="flex flex-col items-center space-y-4 py-4 text-orange-500 font-semibold text-lg">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="our_program.html" class="nav-link">Our Program</a></li>
+                <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
+                <li><a href="our_classroom.html" class="nav-link">Our Classroom</a></li>
+                <li><a href="our_curriculum.html" class="nav-link">Our Curriculum</a></li>
+                <li><a href="#" class="nav-link">Blog</a></li>
+                <li><a href="#" class="nav-link">Contact Us</a></li>
+                <li><a href="#" class="nav-link">APPLY NOW</a></li>
+            </ul>
+        </div>
+
     </header>
+
+
+
+
+
+
+
+
 
 
     <div class="w-full h-20 bg-white"></div>
@@ -75,8 +124,11 @@
 
     <main>
 
-        <section
-            class="relative w-full h-screen flex items-center justify-center bg-[url('img/home/header/back2.png')] bg-cover bg-center bg-no-repeat">
+        <!-- Desktop Section (Hidden on Mobile) -->
+        <section class="relative w-full h-screen  items-center justify-center 
+           bg-cover bg-center bg-no-repeat 
+           hidden sm:flex md:bg-[url('img/home/header/back2.png')]">
+
             <!-- Hero Content -->
             <div class="absolute inset-0 flex">
                 <!-- Left side (Kid Image) -->
@@ -112,109 +164,152 @@
             </div>
         </section>
 
+        <!-- Mobile Section (Hidden on Desktop) -->
+        <section
+            class="flex md:hidden relative w-full h-[30vh] items-center justify-center bg-[url('img/home/header/back2.png')] bg-cover bg-center bg-no-repeat">
 
-        <section class="bg-white py-16 px-10 text-center">
-            <!-- Title -->
-            <h2 class="text-4xl font-bold text-black mb-6">Our Montessori Curriculum</h2>
+            <div class="absolute inset-0 flex items-center justify-between px-1 sm:px-4">
 
-            <!-- Paragraph -->
-            <p class="text-lg text-blue-500 max-w-5xl mx-auto leading-relaxed">
-              “Our school is far from traditional, but also very Classical Montessori. It embraces the Montessori Prepared Environment,
-                 but also exposes children to designated learning sessions, that mimic that of the public schooling system.”
-            </p>
+                <!-- Left Side (Kid Image & Visit Us Icon) -->
+                <div class="w-1/2 flex items-center justify-center">
+                    <img src="img/home/header/boy.png" alt="Happy Child" class="w-[110%] sm:w-[70%] max-w-xs">
 
-            <br>
-            
+                    <!-- Visit Us Icon -->
+                    <div class="absolute top-[40%] left-[30%]">
+                        <img src="img/home/header/visitme2.png" alt="Visit Us" class="w-16 h-16 sm:w-20 sm:h-20">
+                    </div>
+                </div>
+
+                <!-- Right Side (Desk Image) -->
+                <div class="w-1/2 flex items-end justify-center">
+                    <img src="img/home/header/chair.png" alt="School Desk"
+                        class="w-[65%] sm:w-[80%] max-w-[150px] sm:max-w-[240px] mb-1">
+                </div>
+            </div>
+
+            <!-- Hero Text (Top-Right) -->
+            <div class="absolute top-4 right-4 text-white text-right">
+                <h1 class="text-2xl sm:text-3xl font-bold custom-font">New Preschool in Plano!</h1>
+            </div>
+
+            <!-- Bottom Clouds -->
+            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[110%] sm:w-full">
+                <img src="img/home/header/clouds2.png" alt="Clouds" class="w-full">
+            </div>
+
+            <!-- Contact Info -->
+            <div class="absolute bottom-2 left-3 text-left">
+                <p class="text-orange-500 font-bold text-sm sm:text-xl">Have questions?</p>
+                <p class="text-green-500 font-semibold text-sm sm:text-xl">Call (927) 781-2900</p>
+            </div>
         </section>
 
-        <Section class="our-facilities animate-fade-up bg-gray-100 py-16 text-center">
-            <h1 class="text-4xl font-bold text-black mb-6">Our Facilities</h1>
-            <div class="icon-color icon-colorffca00">
-                <i class="fa fa-graduation-cap" style="color:#ffca00"></i>
+
+        <section class="bg-white py-12 px-6 sm:py-16 sm:px-10 text-center">
+            <!-- Title -->
+            <h2 class="text-3xl sm:text-4xl font-bold text-black mb-4 sm:mb-6">
+                Our Montessori Curriculum
+            </h2>
+
+            <!-- Paragraph -->
+            <p class="text-base sm:text-lg text-blue-500 max-w-3xl sm:max-w-5xl mx-auto leading-relaxed">
+                “Our school is far from traditional, but also very Classical Montessori. It embraces the Montessori
+                Prepared Environment, but also exposes children to designated learning sessions that mimic that of the
+                public schooling system.”
+            </p>
+        </section>
+
+
+        <section class="our-facilities animate-fade-up bg-gray-100 py-12 px-4 sm:py-16 text-center">
+            <!-- Title -->
+            <h1 class="text-3xl sm:text-4xl font-bold text-black mb-4 sm:mb-6">Our Facilities</h1>
+
+            <!-- Centered Icon -->
+            <div class="icon-color icon-colorffca00 mx-auto">
+                <i class="fa fa-graduation-cap text-3xl sm:text-4xl" style="color:#ffca00"></i>
             </div>
-            <div class="flexing-facilities">
-                <img src="img/home/Facilities/kite.png" alt="Kite Image" class="mx-auto">
-                <div class="facilities grid grid-cols-2 gap-8 max-w-5xl mx-auto">
 
+            <div class="flexing-facilities flex flex-col items-center">
+                <!-- Kite Image (Reduce size on mobile) -->
+                <img src="img/home/Facilities/kite.png" alt="Kite Image" class="mx-auto w-[60%] sm:w-auto">
+
+                <div class="facilities grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
                     <!-- Prepared Environment -->
-                    <div class="entity">
+                    <div class="entity flex flex-col sm:flex-row items-center text-center sm:text-left">
                         <div
-                            class="icon-fac border-4 border-green-500 w-20 h-20 rounded-full overflow-hidden flex items-center justify-center gr">
+                            class="icon-fac border-4 border-green-500 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center gr">
                             <img src="img/home/Facilities/svg/3.svg" alt="Music Classes Icon"
-                                class="w-full h-full object-cover">
+                                class="w-10 sm:w-full h-auto">
                         </div>
-                        <div class="fac-text">
-                            <h2 class="text-xl font-bold">The Prepared Environment</h2>
-                            <p class="text-gray-600">
-                                
-“Classrooms are prepared to meet your child where he/she is. 
-Our teachers role is to guide students through each activity successfully”
-
+                        <div class="fac-text mt-3 sm:mt-0 sm:ml-4">
+                            <h2 class="text-lg sm:text-xl font-bold">The Prepared Environment</h2>
+                            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                “Classrooms are prepared to meet your child where he/she is.
+                                Our teachers role is to guide students through each activity successfully.”
                             </p>
                         </div>
                     </div>
 
                     <!-- Swimming Classes -->
-                    <div class="entity">
+                    <div class="entity flex flex-col sm:flex-row items-center text-center sm:text-left">
                         <div
-                            class="icon-fac border-4 border-blue-500 w-20 h-20 rounded-full overflow-hidden flex items-center justify-center bl">
+                            class="icon-fac border-4 border-blue-500 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center bl">
                             <img src="img/home/Facilities/svg/2.svg" alt="Music Classes Icon"
-                                class="w-full h-full object-cover">
+                                class="w-10 sm:w-full h-auto">
                         </div>
-
-                        <div class="fac-text">
-                            <h2 class="text-xl font-bold">Swimming Classes</h2>
-                            <p class="text-gray-600">
-                             “Our on-site swimming pool offers a unique opportunity for
-                                physical development and water safety skills. 
+                        <div class="fac-text mt-3 sm:mt-0 sm:ml-4">
+                            <h2 class="text-lg sm:text-xl font-bold">Swimming Classes</h2>
+                            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                “Our on-site swimming pool offers a unique opportunity for
+                                physical development and water safety skills.”
                             </p>
                         </div>
                     </div>
 
                     <!-- Multi Age Learning Areas -->
-                    <div class="entity">
+                    <div class="entity flex flex-col sm:flex-row items-center text-center sm:text-left">
                         <div
-                            class="icon-fac border-4 border-yellow-500 w-20 h-20 rounded-full overflow-hidden flex items-center justify-center yl">
+                            class="icon-fac border-4 border-yellow-500 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center yl">
                             <img src="img/home/Facilities/svg/4.svg" alt="Music Classes Icon"
-                                class="w-full h-full object-cover">
+                                class="w-10 sm:w-full h-auto">
                         </div>
-                        <div class="fac-text">
-                            <h2 class="text-xl font-bold">Multi Age Learning Areas</h2>
-                            <p class="text-gray-600">
-                               “Learning zones are designed to encourage interaction across age groups,
-                                fostering a collaborative learning environment”. 
+                        <div class="fac-text mt-3 sm:mt-0 sm:ml-4">
+                            <h2 class="text-lg sm:text-xl font-bold">Multi Age Learning Areas</h2>
+                            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                “Learning zones are designed to encourage interaction across age groups,
+                                fostering a collaborative learning environment.”
                             </p>
                         </div>
                     </div>
 
                     <!-- Beautiful Playground -->
-                    <div class="entity">
+                    <div class="entity flex flex-col sm:flex-row items-center text-center sm:text-left">
                         <div
-                            class="icon-fac border-4 border-red-500 w-20 h-20 rounded-full overflow-hidden flex items-center justify-center ls">
+                            class="icon-fac border-4 border-red-500 w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center ls">
                             <img src="img/home/Facilities/svg/5.svg" alt="Music Classes Icon"
-                                class="w-full h-full object-cover">
+                                class="w-10 sm:w-full h-auto">
                         </div>
-                        <div class="fac-text">
-                            <h2 class="text-xl font-bold">Our Beautiful Playground</h2>
-                            <p class="text-gray-600">
-                               “Learning zones are designed to encourage interaction across age groups,
-                                 fostering a collaborative learning environment". 
+                        <div class="fac-text mt-3 sm:mt-0 sm:ml-4">
+                            <h2 class="text-lg sm:text-xl font-bold">Our Beautiful Playground</h2>
+                            <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                                “Learning zones are designed to encourage interaction across age groups,
+                                fostering a collaborative learning environment.”
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </Section>
+        </section>
+
 
 
         <section
-            class="relative w-full min-h-screen flex items-center justify-center bg-[url('img/home/Palms_Transparent_Pattern.png')] bg-cover bg-center bg-no-repeat">
+            class="relative w-full min-h-[80vh] sm:min-h-screen flex items-center justify-center bg-[url('img/home/Palms_Transparent_Pattern.png')] bg-cover bg-center bg-no-repeat px-4">
 
-            <div class="relative max-w-4xl mx-auto text-center">
+            <div class="relative max-w-3xl sm:max-w-4xl mx-auto text-center">
 
                 <!-- Floating Image (Teacher & Kids) -->
-                <div class="absolute -top-64 left-1/2 transform -translate-x-1/2 w-64">
+                <div class="absolute -top-40 sm:-top-64 left-1/2 transform -translate-x-1/2 w-48 sm:w-64">
                     <img src="img/home/our_educators/our_educators.png" alt="Teacher with Kids" class="w-full">
                 </div>
 
@@ -225,128 +320,137 @@ Our teachers role is to guide students through each activity successfully”
                     </svg>
 
                     <!-- White Text Content (Cloud Effect) -->
-                    <div class="relative bg-white shadow-lg px-10 py-12 rounded-3xl">
-                        <h2 class="text-3xl font-bold text-orange-500">Qualified Educators</h2>
-                        <p class="text-gray-700 mt-4 leading-relaxed">
-                           “Our certified Montessori teachers are passionate about fostering each child’s unique potential,
-                             creating a nurturing environment that supports individual learning styles.”
+                    <div class="relative bg-white shadow-lg px-6 sm:px-10 py-10 sm:py-12 rounded-3xl">
+                        <h2 class="text-2xl sm:text-3xl font-bold text-orange-500">Qualified Educators</h2>
+                        <p class="text-gray-700 mt-3 sm:mt-4 text-base sm:text-lg leading-relaxed">
+                            “Our certified Montessori teachers are passionate about fostering each child’s unique
+                            potential,
+                            creating a nurturing environment that supports individual learning styles.”
                         </p>
                     </div>
                 </div>
-
             </div>
 
         </section>
 
-        <section class="teacherss relative w-full py-16 px-6 bg-[url('img/home/TeachersPattern.png')] bg-cover bg-center bg-no-repeat">
-            <div class="max-w-6xl mx-auto text-center">
-                
+        <section
+            class="teacherss relative w-full py-12 px-4 sm:py-16 sm:px-6 bg-[url('img/home/Palms_Transparent_Pattern.png')] bg-cover bg-center bg-no-repeat">
+
+            <div class="max-w-5xl mx-auto text-center">
                 <!-- Section Title -->
-                <h2 class="text-4xl font-bold text-black mb-10">Meet Our Teachers</h2>
-        
+                <h2 class="text-3xl sm:text-4xl font-bold text-black mb-6 sm:mb-10">Meet Our Teachers</h2>
+
                 <!-- Teacher Carousel Container -->
-                <div class="relative flex items-center justify-center gap-8 overflow-hidden">
-                    
-                    <!-- Left Arrow -->
-                    <button class="absolute left-0 bg-gray-300 rounded-full p-2 text-gray-700 hover:bg-gray-400 transition">
+                <div class="relative flex items-center justify-center overflow-hidden">
+
+                    <!-- Left Arrow (Hidden on Small Screens) -->
+                    <button
+                        class="absolute left-2 hidden sm:flex bg-gray-300 rounded-full p-2 text-gray-700 hover:bg-gray-400 transition">
                         <i class="fa fa-chevron-left"></i>
                     </button>
-        
-                    <!-- Teacher Profiles -->
-                    <div class="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory w-full justify-center">
-                        
+
+                    <!-- Teacher Profiles (Carousel) -->
+                    <div
+                        class="flex gap-6 sm:gap-8 overflow-x-auto sm:overflow-hidden scroll-smooth snap-x snap-mandatory w-full max-w-full px-2 sm:px-0 justify-center">
+
                         <!-- Teacher 1 -->
-                        <div class="relative flex flex-col items-center">
-                            <div class="w-48 h-48 rounded-full border-4 border-white shadow-lg overflow-hidden">
-                                <img src="img/home/mot/mot1.jpg" alt="Sandra Christie" class="w-full h-full object-cover">
+                        <div class="relative flex flex-col items-center flex-shrink-0 w-[80%] sm:w-[30%] snap-center">
+                            <div
+                                class="w-36 sm:w-48 h-36 sm:h-48 rounded-full border-4 border-white shadow-lg overflow-hidden">
+                                <img src="img/home/mot/mot1.jpg" alt="Sandra Christie"
+                                    class="w-full h-full object-cover">
                             </div>
-                            <h3 class="text-lg font-semibold mt-4">SANDRA CHRISTIE</h3>
-                            <p class="text-blue-400 text-sm">Math Teacher</p>
+                            <h3 class="text-md sm:text-lg font-semibold mt-4">SANDRA CHRISTIE</h3>
+                            <p class="text-blue-400 text-xs sm:text-sm">Math Teacher</p>
                         </div>
-        
+
                         <!-- Teacher 2 -->
-                        <div class="relative flex flex-col items-center">
-                            <div class="w-48 h-48 rounded-full border-4 border-white shadow-lg overflow-hidden">
+                        <div class="relative flex flex-col items-center flex-shrink-0 w-[80%] sm:w-[30%] snap-center">
+                            <div
+                                class="w-36 sm:w-48 h-36 sm:h-48 rounded-full border-4 border-white shadow-lg overflow-hidden">
                                 <img src="img/home/mot/mot2.jpg" alt="Robert White" class="w-full h-full object-cover">
                             </div>
-                            <h3 class="text-lg font-semibold mt-4">ROBERT WHITE</h3>
-                            <p class="text-blue-400 text-sm">Head Teacher</p>
+                            <h3 class="text-md sm:text-lg font-semibold mt-4">ROBERT WHITE</h3>
+                            <p class="text-blue-400 text-xs sm:text-sm">Head Teacher</p>
                         </div>
-        
+
                         <!-- Teacher 3 -->
-                        <div class="relative flex flex-col items-center">
-                            <div class="w-48 h-48 rounded-full border-4 border-white shadow-lg overflow-hidden">
-                                <img src="img/home/mot/mot3.jpg" alt="Angelica Watson" class="w-full h-full object-cover">
+                        <div class="relative flex flex-col items-center flex-shrink-0 w-[80%] sm:w-[30%] snap-center">
+                            <div
+                                class="w-36 sm:w-48 h-36 sm:h-48 rounded-full border-4 border-white shadow-lg overflow-hidden">
+                                <img src="img/home/mot/mot3.jpg" alt="Angelica Watson"
+                                    class="w-full h-full object-cover">
                             </div>
-                            <h3 class="text-lg font-semibold mt-4">ANGELICA WATSON</h3>
-                            <p class="text-blue-400 text-sm">Lead Teacher</p>
+                            <h3 class="text-md sm:text-lg font-semibold mt-4">ANGELICA WATSON</h3>
+                            <p class="text-blue-400 text-xs sm:text-sm">Lead Teacher</p>
                         </div>
-        
+
                     </div>
-        
-                    <!-- Right Arrow -->
-                    <button class="absolute right-0 bg-gray-300 rounded-full p-2 text-gray-700 hover:bg-gray-400 transition">
+
+                    <!-- Right Arrow (Hidden on Small Screens) -->
+                    <button
+                        class="absolute right-2 hidden sm:flex bg-gray-300 rounded-full p-2 text-gray-700 hover:bg-gray-400 transition">
                         <i class="fa fa-chevron-right"></i>
                     </button>
-        
+
                 </div>
-        
+
                 <!-- Pagination Dots -->
-                <div class="mt-6 flex justify-center space-x-2">
-                    <span class="w-3 h-3 bg-gray-400 rounded-full"></span>
-                    <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
-                    <span class="w-3 h-3 bg-gray-300 rounded-full"></span>
+                <div class="mt-4 sm:mt-6 flex justify-center space-x-2">
+                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gray-400 rounded-full"></span>
+                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gray-300 rounded-full"></span>
+                    <span class="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gray-300 rounded-full"></span>
                 </div>
-        
             </div>
         </section>
-        
 
-        <section class="relative w-full py-16 px-6 bg-gray-100 flex items-center justify-center">
-            <div class="max-w-6xl mx-auto grid grid-cols-2 gap-10 items-center">
+
+
+        <section class="relative w-full py-12 px-4 sm:py-16 sm:px-6 bg-gray-100 flex items-center justify-center">
+            <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 items-center text-center sm:text-left">
 
                 <!-- Left Side: Event Details -->
                 <div>
-                    <h2 class="text-3xl font-bold text-black uppercase">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-black uppercase">
                         Upcoming Event: <span class="text-gray-800">Happy Day</span>
                     </h2>
-                    <div class="w-16 h-1 bg-yellow-400 my-2"></div>
+                    <div class="w-12 sm:w-16 h-1 bg-yellow-400 my-2 mx-auto sm:mx-0"></div>
 
-                    <p class="text-gray-600 text-lg mt-2">Dec 14, 2022</p>
+                    <p class="text-gray-600 text-base sm:text-lg mt-2">Dec 14, 2022</p>
 
-                    <p class="text-blue-500 text-base mt-4">
+                    <p class="text-blue-500 text-sm sm:text-base mt-4 leading-relaxed">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua.
                     </p>
 
                     <!-- Countdown Timer -->
-                    <div class="flex space-x-6 mt-6">
+                    <div class="flex flex-wrap justify-center sm:justify-start gap-4 sm:gap-6 mt-6">
                         <div
-                            class="w-24 h-24 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-white font-bold text-xl">
+                            class="w-20 sm:w-24 h-20 sm:h-24 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-white font-bold text-lg sm:text-xl">
                             <span id="days">00</span>
-                            <span class="text-sm font-normal">DAYS</span>
+                            <span class="text-xs sm:text-sm font-normal">DAYS</span>
                         </div>
                         <div
-                            class="w-24 h-24 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-white font-bold text-xl">
+                            class="w-20 sm:w-24 h-20 sm:h-24 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-white font-bold text-lg sm:text-xl">
                             <span id="hours">00</span>
-                            <span class="text-sm font-normal">HOURS</span>
+                            <span class="text-xs sm:text-sm font-normal">HOURS</span>
                         </div>
                         <div
-                            class="w-24 h-24 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-white font-bold text-xl">
+                            class="w-20 sm:w-24 h-20 sm:h-24 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-white font-bold text-lg sm:text-xl">
                             <span id="minutes">00</span>
-                            <span class="text-sm font-normal">MINUTES</span>
+                            <span class="text-xs sm:text-sm font-normal">MINUTES</span>
                         </div>
                         <div
-                            class="w-24 h-24 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-white font-bold text-xl">
+                            class="w-20 sm:w-24 h-20 sm:h-24 bg-yellow-400 rounded-full flex flex-col items-center justify-center text-white font-bold text-lg sm:text-xl">
                             <span id="seconds">00</span>
-                            <span class="text-sm font-normal">SECONDS</span>
+                            <span class="text-xs sm:text-sm font-normal">SECONDS</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right Side: Event Image -->
-                <div class="flex justify-end">
-                    <img src="img/home/event/event.png" alt="Happy Child" class="w-80 h-auto">
+                <div class="flex justify-center sm:justify-end">
+                    <img src="img/home/event/event.png" alt="Happy Child" class="w-60 sm:w-80 h-auto">
                 </div>
 
             </div>
@@ -429,68 +533,90 @@ Our teachers role is to guide students through each activity successfully”
 
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="footer-logo">
-                    <h2>Kids School</h2>
-                    <p>Email</p>
-                </div>
-            </div>
+    <footer class="bg-gray-900 text-white py-10 px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Footer Content -->
+            <div class="footer-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
 
-            <div class="footer-col">
-                <h3>About Us</h3>
-                <p>Lorem ipsum dolor sit amet, consectet adip elit sed do eiusmod tempor.</p>
-                <div class="contact-info">
-                    <p><i class="fa fa-map-marker"></i> Office Box 97845 Baker street 567 Los- Angeles, Clifornia, US.
+                <!-- Logo & Email -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h2 class="text-2xl font-bold">Kids School</h2>
+                        <p class="text-gray-400 mt-2">Support@preschool.com</p>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">About Us</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectet adip elit sed do eiusmod tempor.
                     </p>
-                    <p><i class="fa fa-envelope"></i> Support@preschool.com</p>
-                    <p><i class="fa fa-phone"></i> 1.800.123.4567 - 1.800.123.4566</p>
+                    <div class="contact-info mt-3 text-gray-400 text-sm space-y-2">
+                        <p><i class="fa fa-map-marker text-yellow-400"></i> Office Box 97845 Baker street 567 Los
+                            Angeles, CA, US.</p>
+                        <p><i class="fa fa-envelope text-yellow-400"></i> Support@preschool.com</p>
+                        <p><i class="fa fa-phone text-yellow-400"></i> 1.800.123.4567 - 1.800.123.4566</p>
+                    </div>
+                </div>
+
+                <!-- Latest Courses -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">Latest Courses</h3>
+                    <div class="latest-courses text-gray-400 text-sm space-y-2">
+                        <div class="course-item border-b border-gray-700 pb-2">
+                            <p>Drawing, Painting Lessons</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                        <div class="course-item border-b border-gray-700 pb-2">
+                            <p>HTML5 & CSS3 Lessons</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                        <div class="course-item">
+                            <p>How To Use Computer</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">Social Media</h3>
+                    <div class="social-links flex flex-col space-y-2">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Twitter Feeds</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-col">
-                <h3>Latest Courses</h3>
-                <div class="latest-courses">
-                    <div class="course-item">
-                        <p>Drawing, Painting Lessons</p>
-                        <span>May 10, 2019</span>
-                    </div>
-                    <div class="course-item">
-                        <p>HTML5 & CSS3 Lessons</p>
-                        <span>May 10, 2019</span>
-                    </div>
-                    <div class="course-item">
-                        <p>How To Use Computer</p>
-                        <span>May 10, 2019</span>
-                    </div>
+            <!-- Bottom Section -->
+            <div
+                class="lst flex flex-col sm:flex-row items-center justify-between text-gray-400 text-sm mt-8 border-t border-gray-700 pt-4">
+                <p>© 2024 Preschool. All rights reserved.</p>
+                <div class="footer-links mt-3 sm:mt-0">
+                    <ul class="flex flex-wrap justify-center sm:justify-end gap-3">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Services</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>Social Media</h3>
-                <div class="social-links">
-                    <a href="#" class="instagram">Instagram</a>
-                    <a href="#" class="twitter">Twitter Feeds</a>
-                </div>
-            </div>
-        </div>
-        <div class="lst">
-            <p>© 2024 Preschool. Developed by JWSThemes. All rights reserved.</p>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
             </div>
         </div>
     </footer>
 
     <script src="optimizations.js" defer></script>
+
+    <!-- Scripts -->
+    <script src="parallax.js" defer></script>
+    <script src="scroll-animations.js" defer></script>
+
+    <script src="header.js"></script>
+
+
+
 </body>
 
 </html>

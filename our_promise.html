@@ -43,37 +43,56 @@
 
 <body>
     <!-- Mobile menu button -->
-    <header id="header" class="fixed top-0 left-0 w-full bg-white py-4 shadow-md transition-all duration-300">
-        <div class="container mx-auto flex items-center justify-center gap-12 px-6">
-            <!-- Logo -->
-            <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-20 h-20">
+    <header id="header" class="fixed top-0 left-0 w-full bg-white py-4 shadow-md transition-all duration-300 z-50">
+        <div class="container mx-auto flex items-center justify-between px-6">
 
-            <!-- Navigation -->
-            <nav>
-                <ul class="flex space-x-6 text-orange-500 font-semibold text-base">
-                    <li><a href="index.html"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Home</a></li>
-                    <li><a href="our_program.html"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
-                            Program</a>
-                    </li>
-                    <li><a href="our_promise.html"
-                            class="text-orange-700 hover:underline decoration-2 underline-offset-4">Our
-                            Promise</a></li>
-                    <li><a href="our_classroom.html" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
-                            Classroom</a></li>
-                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
-                            Curriculum</a></li>
-                    <li><a href="#"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Blog</a></li>
-                    <li><a href="#"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Contact Us</a>
-                    </li>
-                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">APPLY
-                            NOW</a></li>
-                </ul>
-            </nav>
+            <!-- Logo (Left on Mobile, Centered with Nav on Desktop) -->
+            <a href="index.html" class="md:hidden">
+                <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-16 h-16 md:w-20 md:h-20">
+            </a>
 
+            <!-- Wrapper for Navigation & Logo (Centered on Desktop) -->
+            <div class="hidden md:flex items-center justify-center w-full space-x-6">
+                <!-- Logo (Visible on Desktop, Inside Navigation) -->
+                <a href="index.html">
+                    <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-16 h-16 md:w-20 md:h-20">
+                </a>
+
+                <nav>
+                    <ul id="nav-menu" class="flex space-x-6 text-orange-500 font-semibold text-base">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="our_program.html" class="nav-link">Our Program</a></li>
+                        <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
+                        <li><a href="our_classroom.html" class="nav-link">Our Classroom</a></li>
+                        <li><a href="our_curriculum.html" class="nav-link">Our Curriculum</a></li>
+                        <li><a href="#" class="nav-link">Blog</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                        <li><a href="#" class="nav-link">APPLY NOW</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!-- Mobile Menu Button (Right on Mobile) -->
+           <button id="menu-toggle" class="md:hidden flex flex-col">
+                <span class="hamburger w-6 h-1 bg-orange-500 block"></span>
+                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+            <ul class="flex flex-col items-center space-y-4 py-4 text-orange-500 font-semibold text-lg">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="our_program.html" class="nav-link">Our Program</a></li>
+                <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
+                <li><a href="our_classroom.html" class="nav-link">Our Classroom</a></li>
+                <li><a href="our_curriculum.html" class="nav-link">Our Curriculum</a></li>
+                <li><a href="#" class="nav-link">Blog</a></li>
+                <li><a href="#" class="nav-link">Contact Us</a></li>
+                <li><a href="#" class="nav-link">APPLY NOW</a></li>
+            </ul>
         </div>
 
     </header>
@@ -94,8 +113,8 @@
                     <h2 class="text-4xl font-bold text-black mb-4">Our Promise</h2>
                     <p class="text-gray-600 mb-10">
                         “Our school is supported by the owners’ vision to
-                         create a space for young learners to acquire 6 main skill sets needed to succeed academically,
-                          with happiness and self-confidence.” 
+                        create a space for young learners to acquire 6 main skill sets needed to succeed academically,
+                        with happiness and self-confidence.”
                     </p>
 
                     <!-- Table -->
@@ -180,28 +199,29 @@
                         <!-- Text Content -->
                         <div class="w-[300px]">
                             <h3 class="text-lg font-bold">Palms Grove Ethos</h3>
-                            <p class="text-gray-300 text-sm">“Our Palm Grove backstory features our Mascots Adrian and Amy,
-                                  who stumbled upon the magical Palm Grove treasure trove, with six magical seeds”. s”. 
-                        </p>
+                            <p class="text-gray-300 text-sm">“Our Palm Grove backstory features our Mascots Adrian and
+                                Amy,
+                                who stumbled upon the magical Palm Grove treasure trove, with six magical seeds”. s”.
+                            </p>
                         </div>
                     </div>
 
                     <div class="flex items-start gap-6">
                         <div
                             class="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-full border-4 border-white bg-transparent hover:bg-red-500 transition duration-300 shadow-lg">
-                        <i class="fa fa-star text-white text-3xl"></i>
-                    </div>
+                            <i class="fa fa-star text-white text-3xl"></i>
+                        </div>
                         <div class="w-[300px]">
                             <h3 class="text-lg font-bold">Three Magical Seeds</h3>
                             <p class="text-gray-300 text-sm">
                                 1. Pink Luna: Love and Kindness
-                        </p>
-                        <p class="text-gray-300 text-sm">
-                            2. Red Blaze: Courage
-                        </p>
-                        <p class="text-gray-300 text-sm">
-                            3. Orange Sunny: Spreading Happiness and Joy
-                        </p>
+                            </p>
+                            <p class="text-gray-300 text-sm">
+                                2. Red Blaze: Courage
+                            </p>
+                            <p class="text-gray-300 text-sm">
+                                3. Orange Sunny: Spreading Happiness and Joy
+                            </p>
                         </div>
                     </div>
 
@@ -221,7 +241,7 @@
                             <p class="text-gray-300 text-sm">
                                 6. Purple Dreamer: Inspiring Creativity
                             </p>
-                            </div>
+                        </div>
                     </div>
 
                     <!-- Next Three Items -->
@@ -232,8 +252,9 @@
                         </div>
                         <div class="w-[300px]">
                             <h3 class="text-lg font-bold">Our Vision is Our Promise</h3>
-                            <p class="text-gray-300 text-sm">“Andriean and Amy,  were  inspired to plant the magical seeds and they grew into one resilient,
-                                 knowledgable, generous, loving, and magical palm tree.”</p>    
+                            <p class="text-gray-300 text-sm">“Andriean and Amy, were inspired to plant the magical seeds
+                                and they grew into one resilient,
+                                knowledgable, generous, loving, and magical palm tree.”</p>
                         </div>
                     </div>
 
@@ -244,8 +265,9 @@
                         </div>
                         <div class="w-[300px]">
                             <h3 class="text-lg font-bold">Clear Communication</h3>
-                            <p class="text-gray-300 text-sm">“Parents are our partners and co-teachers in their children’s learning journey,
-                                 therefore we maintain open and consistent channels of communication.” </p>
+                            <p class="text-gray-300 text-sm">“Parents are our partners and co-teachers in their
+                                children’s learning journey,
+                                therefore we maintain open and consistent channels of communication.” </p>
                         </div>
                     </div>
 
@@ -256,8 +278,9 @@
                         </div>
                         <div class="w-[300px]">
                             <h3 class="text-lg font-bold">Individualized Approach</h3>
-                            <p class="text-gray-300 text-sm">“Through connection and close observation, our teachers nurture children’s individual strengths and challenges,
-                                 empowering them to build self-esteem, resilience, and self sufficiency.”</p>
+                            <p class="text-gray-300 text-sm">“Through connection and close observation, our teachers
+                                nurture children’s individual strengths and challenges,
+                                empowering them to build self-esteem, resilience, and self sufficiency.”</p>
                         </div>
                     </div>
 
@@ -269,30 +292,34 @@
 
         <section class="w-full py-16 px-6 bg-white">
             <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-7 gap-">
-                
+
                 <!-- Left Column: Our Day -->
                 <div class="col-span-2">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Day</h2>
                     <ul class="space-y-4">
                         <li class="flex items-center gap-4">
-                            <button class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg font-bold">−</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg font-bold">−</button>
                             <span class="text-gray-800 font-semibold">Practical Life Skills</span>
                         </li>
                         <li class="flex items-center gap-4">
-                            <button class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg font-bold">+</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg font-bold">+</button>
                             <span class="text-gray-800 font-semibold">Writing, Reading and Math</span>
                         </li>
                         <li class="flex items-center gap-4">
-                            <button class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg font-bold">+</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg font-bold">+</button>
                             <span class="text-gray-800 font-semibold">Happiness Activities</span>
                         </li>
                         <li class="flex items-center gap-4">
-                            <button class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg font-bold">+</button>
+                            <button
+                                class="w-8 h-8 flex items-center justify-center rounded-full bg-yellow-500 text-white text-lg font-bold">+</button>
                             <span class="text-gray-800 font-semibold">Reflecting on Individual Progress</span>
                         </li>
                     </ul>
                 </div>
-        
+
                 <!-- Right Column: Our Focus -->
                 <div class="col-span-5">
                     <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Focus</h2>
@@ -303,21 +330,21 @@
                                 <div class="absolute top-0 left-0 h-full bg-yellow-500 rounded-full w-[30%]"></div>
                             </div>
                         </div>
-                    
+
                         <div class="relative">
                             <span class="absolute -top-5 right-0 text-gray-800 font-semibold text-sm">40%</span>
                             <div class="bg-gray-300 h-3 rounded-full w-full mt-2 relative overflow-hidden">
                                 <div class="absolute top-0 left-0 h-full bg-yellow-500 rounded-full w-[40%]"></div>
                             </div>
                         </div>
-                    
+
                         <div class="relative">
                             <span class="absolute -top-5 right-0 text-gray-800 font-semibold text-sm">15%</span>
                             <div class="bg-gray-300 h-3 rounded-full w-full mt-2 relative overflow-hidden">
                                 <div class="absolute top-0 left-0 h-full bg-yellow-500 rounded-full w-[15%]"></div>
                             </div>
                         </div>
-                    
+
                         <div class="relative">
                             <span class="absolute -top-5 right-0 text-gray-800 font-semibold text-sm">15%</span>
                             <div class="bg-gray-300 h-3 rounded-full w-full mt-2 relative overflow-hidden">
@@ -325,13 +352,13 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+
                 </div>
-        
+
             </div>
         </section>
-        
+
 
 
 
@@ -342,68 +369,83 @@
 
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="footer-logo">
-                    <h2>Kids School</h2>
-                    <p>Email</p>
-                </div>
-            </div>
+    <footer class="bg-gray-900 text-white py-10 px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Footer Content -->
+            <div class="footer-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
 
-            <div class="footer-col">
-                <h3>About Us</h3>
-                <p>Lorem ipsum dolor sit amet, consectet adip elit sed do eiusmod tempor.</p>
-                <div class="contact-info">
-                    <p><i class="fa fa-map-marker"></i> Office Box 97845 Baker street 567 Los- Angeles, Clifornia, US.
+                <!-- Logo & Email -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h2 class="text-2xl font-bold">Kids School</h2>
+                        <p class="text-gray-400 mt-2">Support@preschool.com</p>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">About Us</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectet adip elit sed do eiusmod tempor.
                     </p>
-                    <p><i class="fa fa-envelope"></i> Support@preschool.com</p>
-                    <p><i class="fa fa-phone"></i> 1.800.123.4567 - 1.800.123.4566</p>
+                    <div class="contact-info mt-3 text-gray-400 text-sm space-y-2">
+                        <p><i class="fa fa-map-marker text-yellow-400"></i> Office Box 97845 Baker street 567 Los
+                            Angeles, CA, US.</p>
+                        <p><i class="fa fa-envelope text-yellow-400"></i> Support@preschool.com</p>
+                        <p><i class="fa fa-phone text-yellow-400"></i> 1.800.123.4567 - 1.800.123.4566</p>
+                    </div>
+                </div>
+
+                <!-- Latest Courses -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">Latest Courses</h3>
+                    <div class="latest-courses text-gray-400 text-sm space-y-2">
+                        <div class="course-item border-b border-gray-700 pb-2">
+                            <p>Drawing, Painting Lessons</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                        <div class="course-item border-b border-gray-700 pb-2">
+                            <p>HTML5 & CSS3 Lessons</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                        <div class="course-item">
+                            <p>How To Use Computer</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">Social Media</h3>
+                    <div class="social-links flex flex-col space-y-2">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Twitter Feeds</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-col">
-                <h3>Latest Courses</h3>
-                <div class="latest-courses">
-                    <div class="course-item">
-                        <p>Drawing, Painting Lessons</p>
-                        <span>May 10, 2019</span>
-                    </div>
-                    <div class="course-item">
-                        <p>HTML5 & CSS3 Lessons</p>
-                        <span>May 10, 2019</span>
-                    </div>
-                    <div class="course-item">
-                        <p>How To Use Computer</p>
-                        <span>May 10, 2019</span>
-                    </div>
+            <!-- Bottom Section -->
+            <div
+                class="lst flex flex-col sm:flex-row items-center justify-between text-gray-400 text-sm mt-8 border-t border-gray-700 pt-4">
+                <p>© 2024 Preschool. All rights reserved.</p>
+                <div class="footer-links mt-3 sm:mt-0">
+                    <ul class="flex flex-wrap justify-center sm:justify-end gap-3">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Services</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>Social Media</h3>
-                <div class="social-links">
-                    <a href="#" class="instagram">Instagram</a>
-                    <a href="#" class="twitter">Twitter Feeds</a>
-                </div>
-            </div>
-        </div>
-        <div class="lst">
-            <p>© 2024 Preschool. Developed by JWSThemes. All rights reserved.</p>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
             </div>
         </div>
     </footer>
 
     <script src="optimizations.js" defer></script>
+    <script src="header.js"></script>
+
 
 
 

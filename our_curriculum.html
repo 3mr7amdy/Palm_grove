@@ -64,41 +64,58 @@
 
 <body>
     <!-- Mobile menu button -->
-    <header id="header" class="fixed top-0 left-0 w-full bg-white py-4 shadow-md transition-all duration-300">
-        <div class="container mx-auto flex items-center justify-center gap-12 px-6">
-            <!-- Logo -->
-            <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-20 h-20">
+    <header id="header" class="fixed top-0 left-0 w-full bg-white py-4 shadow-md transition-all duration-300 z-50">
+        <div class="container mx-auto flex items-center justify-between px-6">
 
-            <!-- Navigation -->
-            <nav>
-                <ul class="flex space-x-6 text-orange-500 font-semibold text-base">
-                    <li><a href="index.html"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Home</a></li>
-                    <li><a href="our_program.html"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
-                            Program</a>
-                    </li>
-                    <li><a href="our_promise.html"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
-                            Promise</a></li>
-                    <li><a href="our_classroom.html"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Our
-                            Classroom</a></li>
-                    <li><a href="our_curriculum.html"
-                            class="text-orange-700 underline decoration-2 underline-offset-4">Our
-                            Curriculum</a></li>
-                    <li><a href="#"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Blog</a></li>
-                    <li><a href="#"
-                            class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">Contact Us</a>
-                    </li>
-                    <li><a href="#" class="hover:text-orange-700 hover:underline decoration-2 underline-offset-4">APPLY
-                            NOW</a></li>
-                </ul>
-            </nav>
+            <!-- Logo (Left on Mobile, Centered with Nav on Desktop) -->
+            <a href="index.html" class="md:hidden">
+                <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-16 h-16 md:w-20 md:h-20">
+            </a>
 
+            <!-- Wrapper for Navigation & Logo (Centered on Desktop) -->
+            <div class="hidden md:flex items-center justify-center w-full space-x-6">
+                <!-- Logo (Visible on Desktop, Inside Navigation) -->
+                <a href="index.html">
+                    <img src="img/logo/pglogo.png" alt="Preschool Logo" class="w-16 h-16 md:w-20 md:h-20">
+                </a>
+
+                <nav>
+                    <ul id="nav-menu" class="flex space-x-6 text-orange-500 font-semibold text-base">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="our_program.html" class="nav-link">Our Program</a></li>
+                        <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
+                        <li><a href="our_classroom.html" class="nav-link">Our Classroom</a></li>
+                        <li><a href="our_curriculum.html" class="nav-link">Our Curriculum</a></li>
+                        <li><a href="#" class="nav-link">Blog</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                        <li><a href="#" class="nav-link">APPLY NOW</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!-- Mobile Menu Button (Right on Mobile) -->
+           <button id="menu-toggle" class="md:hidden flex flex-col">
+                <span class="hamburger w-6 h-1 bg-orange-500 block"></span>
+                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+            </button>
         </div>
 
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
+            <ul class="flex flex-col items-center space-y-4 py-4 text-orange-500 font-semibold text-lg">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="our_program.html" class="nav-link">Our Program</a></li>
+                <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
+                <li><a href="our_classroom.html" class="nav-link">Our Classroom</a></li>
+                <li><a href="our_curriculum.html" class="nav-link">Our Curriculum</a></li>
+                <li><a href="#" class="nav-link">Blog</a></li>
+                <li><a href="#" class="nav-link">Contact Us</a></li>
+                <li><a href="#" class="nav-link">APPLY NOW</a></li>
+            </ul>
+        </div>
+        
     </header>
 
 
@@ -108,83 +125,87 @@
 
 
     <main>
-        <section class="w-full h-[350px] bg-cover bg-center relative flex items-center justify-center text-white"
-            style="background-image: url('img/home/gallery/gallery6.jpg');">
-            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-            <div class="relative text-center">
-                <h1 class="text-4xl font-bold">Our Curriculum</h1>
-                <nav class="mt-2 text-sm">
-                    <a href="index.html" class="text-gray-300 hover:text-white">HOME</a>
-                    <span class="mx-2 text-gray-400">|</span>
-                    <span class="text-white">Our Curriculum</span>
-                </nav>
+
+      <!-- Hero Section -->
+<section class="w-full h-[250px] sm:h-[350px] bg-cover bg-center relative flex items-center justify-center text-white"
+    style="background-image: url('img/home/gallery/gallery6.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative text-center px-4">
+        <h1 class="text-3xl sm:text-4xl font-bold">Our Curriculum</h1>
+        <nav class="mt-2 text-xs sm:text-sm">
+            <a href="index.html" class="text-gray-300 hover:text-white">HOME</a>
+            <span class="mx-2 text-gray-400">|</span>
+            <span class="text-white">Our Curriculum</span>
+        </nav>
+    </div>
+</section>
+
+<!-- Curriculum Section -->
+<section class="w-full py-12 sm:py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+        
+        <!-- Tabs -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <button class="tab-button active px-5 sm:px-6 py-2 bg-blue-500 text-white rounded-md text-sm sm:text-base"
+                data-category="all">Infant/Toddler</button>
+            <button class="tab-button px-5 sm:px-6 py-2 bg-gray-200 text-gray-800 rounded-md text-sm sm:text-base"
+                data-category="Preschool">Preschool</button>
+            <button class="tab-button px-5 sm:px-6 py-2 bg-gray-200 text-gray-800 rounded-md text-sm sm:text-base"
+                data-category="Kindergarten">Kindergarten</button>
+            <button class="tab-button px-5 sm:px-6 py-2 bg-gray-200 text-gray-800 rounded-md text-sm sm:text-base"
+                data-category="Enrichment">Enrichment</button>
+        </div>
+
+        <!-- Course Grid -->
+        <div id="course-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Courses will be loaded dynamically -->
+        </div>
+    </div>
+</section>
+
+<!-- Course Template -->
+<template id="course-template">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform duration-[1000ms] ease-in-out hover:shadow-xl group">
+        
+        <!-- Image Wrapper -->
+        <div class="overflow-hidden relative w-full h-48 sm:h-64 perspective">
+            <img src="" alt=""
+                class="course-image w-full h-full object-cover object-center transition-transform duration-[1000ms] ease-in-out group-hover:scale-110 group-hover:rotate-6">
+        </div>
+
+        <!-- Course Info -->
+        <div class="p-4 sm:p-6 text-center">
+            <!-- Date -->
+            <p class="text-gray-400 text-xs mb-1 sm:mb-2 course-date"></p>
+
+            <!-- Title -->
+            <h3 class="text-base sm:text-lg font-bold text-gray-900 course-title"></h3>
+
+            <!-- Description -->
+            <p class="text-sm text-gray-600 mt-1 sm:mt-2 course-description"></p>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-300 my-3 sm:my-4"></div>
+
+            <!-- Class Details -->
+            <div class="flex justify-between text-gray-500 text-xs sm:text-sm">
+                <div>
+                    <span class="block uppercase text-[10px] sm:text-xs font-semibold text-gray-400">Year Olds</span>
+                    <span class="text-blue-500 font-semibold course-age"></span>
+                </div>
+                <div>
+                    <span class="block uppercase text-[10px] sm:text-xs font-semibold text-gray-400">Class Size</span>
+                    <span class="text-gray-900 font-semibold course-size"></span>
+                </div>
+                <div>
+                    <span class="block uppercase text-[10px] sm:text-xs font-semibold text-gray-400">Price</span>
+                    <span class="text-blue-500 font-semibold course-price"></span>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</template>
 
-
-        <section class="w-full py-16 bg-gray-100">
-            <div class="max-w-6xl mx-auto px-6 text-center">
-                <!-- Tabs -->
-                <div class="flex space-x-4 justify-center mb-8">
-                    <button class="tab-button active px-6 py-2 bg-blue-500 text-white rounded-md"
-                        data-category="all">Infant/Toddler</button>
-                    <button class="tab-button px-6 py-2 bg-gray-200 text-gray-800 rounded-md"
-                        data-category="Preschool">Preschool</button>
-                    <button class="tab-button px-6 py-2 bg-gray-200 text-gray-800 rounded-md"
-                        data-category="Kindergarten">Kindergarten</button>
-                    <button class="tab-button px-6 py-2 bg-gray-200 text-gray-800 rounded-md"
-                        data-category="Enrichment">Enrichment</button>
-                </div>
-
-                <!-- Course Grid -->
-                <div id="course-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Courses will be loaded here dynamically -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Course Template -->
-        <template id="course-template">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-transform duration-[2000ms] ease-in-out hover:shadow-xl group">
-                <!-- Image Wrapper -->
-                <div class="overflow-hidden relative w-full h-64 perspective">
-                    <img src="" alt=""
-                        class="course-image w-full h-full object-cover object-center transition-transform duration-[2000ms] ease-in-out group-hover:scale-110 group-hover:rotate-12">
-                </div>
-        
-                <!-- Course Info -->
-                <div class="p-6 text-center">
-                    <!-- Date -->
-                    <p class="text-gray-400 text-xs mb-2 course-date"></p>
-        
-                    <!-- Title -->
-                    <h3 class="text-lg font-bold text-gray-900 course-title"></h3>
-        
-                    <!-- Description -->
-                    <p class="text-sm text-gray-600 mt-1 course-description"></p>
-        
-                    <!-- Divider -->
-                    <div class="border-t border-gray-300 my-4"></div>
-        
-                    <!-- Class Details -->
-                    <div class="flex justify-between text-gray-500 text-sm">
-                        <div>
-                            <span class="block uppercase text-xs font-semibold text-gray-400">Year Olds</span>
-                            <span class="text-blue-500 font-semibold course-age"></span>
-                        </div>
-                        <div>
-                            <span class="block uppercase text-xs font-semibold text-gray-400">Class Size</span>
-                            <span class="text-gray-900 font-semibold course-size"></span>
-                        </div>
-                        <div>
-                            <span class="block uppercase text-xs font-semibold text-gray-400">Price</span>
-                            <span class="text-blue-500 font-semibold course-price"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </template>
-        
 
 
 
@@ -194,68 +215,83 @@
 
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="footer-logo">
-                    <h2>Kids School</h2>
-                    <p>Email</p>
-                </div>
-            </div>
+    <footer class="bg-gray-900 text-white py-10 px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Footer Content -->
+            <div class="footer-content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
 
-            <div class="footer-col">
-                <h3>About Us</h3>
-                <p>Lorem ipsum dolor sit amet, consectet adip elit sed do eiusmod tempor.</p>
-                <div class="contact-info">
-                    <p><i class="fa fa-map-marker"></i> Office Box 97845 Baker street 567 Los- Angeles, Clifornia, US.
+                <!-- Logo & Email -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <h2 class="text-2xl font-bold">Kids School</h2>
+                        <p class="text-gray-400 mt-2">Support@preschool.com</p>
+                    </div>
+                </div>
+
+                <!-- About Us -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">About Us</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectet adip elit sed do eiusmod tempor.
                     </p>
-                    <p><i class="fa fa-envelope"></i> Support@preschool.com</p>
-                    <p><i class="fa fa-phone"></i> 1.800.123.4567 - 1.800.123.4566</p>
+                    <div class="contact-info mt-3 text-gray-400 text-sm space-y-2">
+                        <p><i class="fa fa-map-marker text-yellow-400"></i> Office Box 97845 Baker street 567 Los
+                            Angeles, CA, US.</p>
+                        <p><i class="fa fa-envelope text-yellow-400"></i> Support@preschool.com</p>
+                        <p><i class="fa fa-phone text-yellow-400"></i> 1.800.123.4567 - 1.800.123.4566</p>
+                    </div>
+                </div>
+
+                <!-- Latest Courses -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">Latest Courses</h3>
+                    <div class="latest-courses text-gray-400 text-sm space-y-2">
+                        <div class="course-item border-b border-gray-700 pb-2">
+                            <p>Drawing, Painting Lessons</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                        <div class="course-item border-b border-gray-700 pb-2">
+                            <p>HTML5 & CSS3 Lessons</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                        <div class="course-item">
+                            <p>How To Use Computer</p>
+                            <span class="text-xs">May 10, 2019</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-col">
+                    <h3 class="text-xl font-semibold mb-3">Social Media</h3>
+                    <div class="social-links flex flex-col space-y-2">
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Twitter Feeds</a>
+                    </div>
                 </div>
             </div>
 
-            <div class="footer-col">
-                <h3>Latest Courses</h3>
-                <div class="latest-courses">
-                    <div class="course-item">
-                        <p>Drawing, Painting Lessons</p>
-                        <span>May 10, 2019</span>
-                    </div>
-                    <div class="course-item">
-                        <p>HTML5 & CSS3 Lessons</p>
-                        <span>May 10, 2019</span>
-                    </div>
-                    <div class="course-item">
-                        <p>How To Use Computer</p>
-                        <span>May 10, 2019</span>
-                    </div>
+            <!-- Bottom Section -->
+            <div
+                class="lst flex flex-col sm:flex-row items-center justify-between text-gray-400 text-sm mt-8 border-t border-gray-700 pt-4">
+                <p>© 2024 Preschool. All rights reserved.</p>
+                <div class="footer-links mt-3 sm:mt-0">
+                    <ul class="flex flex-wrap justify-center sm:justify-end gap-3">
+                        <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Services</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
+                    </ul>
                 </div>
-            </div>
-
-            <div class="footer-col">
-                <h3>Social Media</h3>
-                <div class="social-links">
-                    <a href="#" class="instagram">Instagram</a>
-                    <a href="#" class="twitter">Twitter Feeds</a>
-                </div>
-            </div>
-        </div>
-        <div class="lst">
-            <p>© 2024 Preschool. Developed by JWSThemes. All rights reserved.</p>
-            <div class="footer-links">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
             </div>
         </div>
     </footer>
 
     <script src="optimizations.js" defer></script>
+    <script src="header.js"></script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
