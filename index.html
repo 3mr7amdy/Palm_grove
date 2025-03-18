@@ -18,6 +18,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+
     <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="animations.css">
@@ -68,7 +70,7 @@
                 </a>
 
                 <nav>
-                    <ul id="nav-menu" class="flex space-x-6 text-orange-500 font-semibold text-base">
+                    <ul id="nav-menu" class="flex space-x-6 text-[#F03725] font-semibold text-base">
                         <li><a href="index.html" class="nav-link">Home</a></li>
                         <li><a href="our_program.html" class="nav-link">Our Program</a></li>
                         <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
@@ -84,17 +86,18 @@
 
             <!-- Mobile Menu Button (Right on Mobile) -->
             <button id="menu-toggle" class="md:hidden flex flex-col">
-                <span class="hamburger w-6 h-1 bg-orange-500 block"></span>
-                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
-                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+                <span class="hamburger w-6 h-1 bg-[#F03725] block"></span>
+                <span class="hamburger w-6 h-1 bg-[#F03725] block -mt-[1px]"></span>
+                <span class="hamburger w-6 h-1 bg-[#F03725] block -mt-[1px]"></span>
             </button>
-            
-            
+
+
         </div>
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
-            <ul class="flex flex-col items-center space-y-4 py-4 text-orange-500 font-semibold text-lg">
+
+            <ul class="flex flex-col items-center space-y-4 py-4 text-[#F03725] font-semibold text-lg">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="our_program.html" class="nav-link">Our Program</a></li>
                 <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
@@ -143,13 +146,16 @@
 
                 <!-- Right side (Desk Image) -->
                 <div class="w-1/2 relative flex items-end justify-center">
-                    <img src="img/home/header/chair.png" alt="School Desk" class="w-[50%] max-w-sm mb-4">
+                    <img src="img/home/header/chair.png" alt="School Desk"
+                        class="w-[80%] max-w-md mb-0 lg:w-full lg:max-w-lg">
                 </div>
             </div>
 
             <!-- Hero Text (Top-Right) -->
+
+
             <div class="absolute top-20 right-20 text-white text-right">
-                <h1 class="text-6xl font-bold custom-font">New Preschool in Plano!</h1>
+                <h1 class="text-6xl font-extrabold font-sans">New Preschool in Plano!</h1>
             </div>
 
             <!-- Bottom Clouds -->
@@ -159,8 +165,8 @@
 
             <!-- Contact Info -->
             <div class="absolute bottom-12 left-20 text-left">
-                <p class="text-orange-500 font-bold text-4xl">Have questions?</p>
-                <p class="text-green-500 font-semibold text-4xl">Call (927) 781-2900</p>
+                <p class="text-[#F03725] font-bold text-4xl">Have questions?</p>
+                <p class="text-[#92CC8E] font-semibold text-4xl">Call (927) 781-2900</p>
             </div>
         </section>
 
@@ -199,7 +205,7 @@
 
             <!-- Contact Info -->
             <div class="absolute bottom-2 left-3 text-left">
-                <p class="text-orange-500 font-bold text-sm sm:text-xl">Have questions?</p>
+                <p class="text-[#F03725] font-bold text-sm sm:text-xl">Have questions?</p>
                 <p class="text-green-500 font-semibold text-sm sm:text-xl">Call (927) 781-2900</p>
             </div>
         </section>
@@ -212,15 +218,15 @@
             </h2>
 
             <!-- Paragraph -->
-            <p class="text-base sm:text-lg text-blue-500 max-w-3xl sm:max-w-5xl mx-auto leading-relaxed">
+            <p class="text-base sm:text-lg text-[#699BD2] max-w-3xl sm:max-w-5xl mx-auto leading-relaxed">
                 “Our school is far from traditional, but also very Classical Montessori. It embraces the Montessori
                 Prepared Environment, but also exposes children to designated learning sessions that mimic that of the
                 public schooling system.”
             </p>
         </section>
+ 
 
-
-        <section class="our-facilities animate-fade-up bg-gray-100 py-12 px-4 sm:py-16 text-center">
+        <section class="our-facilities animate-fade-up bg-gray-100 py-12 px-4 pb-20 sm:pb-28 text-center">
             <!-- Title -->
             <h1 class="text-3xl sm:text-4xl font-bold text-black mb-4 sm:mb-6">Our Facilities</h1>
 
@@ -292,8 +298,8 @@
                         <div class="fac-text mt-3 sm:mt-0 sm:ml-4">
                             <h2 class="text-lg sm:text-xl font-bold">Our Beautiful Playground</h2>
                             <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
-                                “Learning zones are designed to encourage interaction across age groups,
-                                fostering a collaborative learning environment.”
+                                “Our facility offers a vibrant, outdoor space, designed with natural elements, where
+                                children can explore, play, and develop essential physical and social skills.”
                             </p>
                         </div>
                     </div>
@@ -303,13 +309,12 @@
 
 
 
-        <section
-            class="relative w-full min-h-[80vh] sm:min-h-screen flex items-center justify-center bg-[url('img/home/Palms_Transparent_Pattern.png')] bg-cover bg-center bg-no-repeat px-4">
+        <section class="relative w-full flex items-center justify-center bg-[url('img/home/Palms_Transparent_Pattern.png')] bg-cover bg-center bg-no-repeat px-4 pt-32 pb-16 sm:pt-48 sm:pb-24">
 
             <div class="relative max-w-3xl sm:max-w-4xl mx-auto text-center">
 
                 <!-- Floating Image (Teacher & Kids) -->
-                <div class="absolute -top-40 sm:-top-64 left-1/2 transform -translate-x-1/2 w-48 sm:w-64">
+                <div class="absolute -top-28 sm:-top-48 left-1/2 transform -translate-x-1/2 w-48 sm:w-64 pointer-events-none">
                     <img src="img/home/our_educators/our_educators.png" alt="Teacher with Kids" class="w-full">
                 </div>
 
@@ -321,7 +326,7 @@
 
                     <!-- White Text Content (Cloud Effect) -->
                     <div class="relative bg-white shadow-lg px-6 sm:px-10 py-10 sm:py-12 rounded-3xl">
-                        <h2 class="text-2xl sm:text-3xl font-bold text-orange-500">Qualified Educators</h2>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-[#F03725]">Qualified Educators</h2>
                         <p class="text-gray-700 mt-3 sm:mt-4 text-base sm:text-lg leading-relaxed">
                             “Our certified Montessori teachers are passionate about fostering each child’s unique
                             potential,
@@ -333,8 +338,8 @@
 
         </section>
 
-        <section
-            class="teacherss relative w-full py-12 px-4 sm:py-16 sm:px-6 bg-[url('img/home/Palms_Transparent_Pattern.png')] bg-cover bg-center bg-no-repeat">
+
+        <section class="teacherss relative w-full pt-6 pb-12 px-4 sm:pt-10 sm:pb-16 sm:px-6 bg-none">
 
             <div class="max-w-5xl mx-auto text-center">
                 <!-- Section Title -->

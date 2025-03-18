@@ -80,7 +80,7 @@
                 </a>
 
                 <nav>
-                    <ul id="nav-menu" class="flex space-x-6 text-orange-500 font-semibold text-base">
+                    <ul id="nav-menu" class="flex space-x-6 text-[#F03725] font-semibold text-base">
                         <li><a href="index.html" class="nav-link">Home</a></li>
                         <li><a href="our_program.html" class="nav-link">Our Program</a></li>
                         <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
@@ -96,15 +96,15 @@
 
             <!-- Mobile Menu Button (Right on Mobile) -->
            <button id="menu-toggle" class="md:hidden flex flex-col">
-                <span class="hamburger w-6 h-1 bg-orange-500 block"></span>
-                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
-                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+                <span class="hamburger w-6 h-1 bg-[#F03725] block"></span>
+                <span class="hamburger w-6 h-1 bg-[#F03725] block -mt-[1px]"></span>
+                <span class="hamburger w-6 h-1 bg-[#F03725] block -mt-[1px]"></span>
             </button>
         </div>
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
-            <ul class="flex flex-col items-center space-y-4 py-4 text-orange-500 font-semibold text-lg">
+            <ul class="flex flex-col items-center space-y-4 py-4 text-[#F03725] font-semibold text-lg">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="our_program.html" class="nav-link">Our Program</a></li>
                 <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
@@ -146,7 +146,7 @@
         
         <!-- Tabs -->
         <div class="flex flex-wrap justify-center gap-4 mb-8">
-            <button class="tab-button active px-5 sm:px-6 py-2 bg-blue-500 text-white rounded-md text-sm sm:text-base"
+            <button class="tab-button active px-5 sm:px-6 py-2 bg-[#F03725] text-white rounded-md text-sm sm:text-base"
                 data-category="all">Infant/Toddler</button>
             <button class="tab-button px-5 sm:px-6 py-2 bg-gray-200 text-gray-800 rounded-md text-sm sm:text-base"
                 data-category="Preschool">Preschool</button>
@@ -191,7 +191,7 @@
             <div class="flex justify-between text-gray-500 text-xs sm:text-sm">
                 <div>
                     <span class="block uppercase text-[10px] sm:text-xs font-semibold text-gray-400">Year Olds</span>
-                    <span class="text-blue-500 font-semibold course-age"></span>
+                    <span class="text-[#F03725] font-semibold course-age"></span>
                 </div>
                 <div>
                     <span class="block uppercase text-[10px] sm:text-xs font-semibold text-gray-400">Class Size</span>
@@ -199,7 +199,7 @@
                 </div>
                 <div>
                     <span class="block uppercase text-[10px] sm:text-xs font-semibold text-gray-400">Price</span>
-                    <span class="text-blue-500 font-semibold course-price"></span>
+                    <span class="text-[#F03725] font-semibold course-price"></span>
                 </div>
             </div>
         </div>
@@ -337,12 +337,12 @@
                 button.addEventListener("click", function () {
                     // Remove active class from all buttons
                     document.querySelectorAll(".tab-button").forEach(btn => {
-                        btn.classList.remove("bg-blue-500", "text-white");
+                        btn.classList.remove("bg-[#F03725]", "text-white");
                         btn.classList.add("bg-gray-200", "text-gray-800");
                     });
 
                     // Add active class to the clicked button
-                    this.classList.add("bg-blue-500", "text-white");
+                    this.classList.add("bg-[#F03725]", "text-white");
                     this.classList.remove("bg-gray-200", "text-gray-800");
 
                     displayCourses(this.dataset.category);

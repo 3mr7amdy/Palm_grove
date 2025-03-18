@@ -59,7 +59,7 @@
                 </a>
 
                 <nav>
-                    <ul id="nav-menu" class="flex space-x-6 text-orange-500 font-semibold text-base">
+                    <ul id="nav-menu" class="flex space-x-6 text-[#F03725] font-semibold text-base">
                         <li><a href="index.html" class="nav-link">Home</a></li>
                         <li><a href="our_program.html" class="nav-link">Our Program</a></li>
                         <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
@@ -74,16 +74,16 @@
             </div>
 
             <!-- Mobile Menu Button (Right on Mobile) -->
-           <button id="menu-toggle" class="md:hidden flex flex-col">
-                <span class="hamburger w-6 h-1 bg-orange-500 block"></span>
-                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
-                <span class="hamburger w-6 h-1 bg-orange-500 block -mt-[1px]"></span>
+            <button id="menu-toggle" class="md:hidden flex flex-col">
+                <span class="hamburger w-6 h-1 bg-[#F03725] block"></span>
+                <span class="hamburger w-6 h-1 bg-[#F03725] block -mt-[1px]"></span>
+                <span class="hamburger w-6 h-1 bg-[#F03725] block -mt-[1px]"></span>
             </button>
         </div>
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
-            <ul class="flex flex-col items-center space-y-4 py-4 text-orange-500 font-semibold text-lg">
+            <ul class="flex flex-col items-center space-y-4 py-4 text-[#F03725] font-semibold text-lg">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="our_program.html" class="nav-link">Our Program</a></li>
                 <li><a href="our_promise.html" class="nav-link">Our Promise</a></li>
@@ -94,7 +94,7 @@
                 <li><a href="#" class="nav-link">APPLY NOW</a></li>
             </ul>
         </div>
-        
+
     </header>
 
 
@@ -109,38 +109,39 @@
             <!-- Buttons for Different Programs -->
             <div class="flex flex-wrap justify-center gap-4 mb-6 relative">
                 <div class="relative">
-                    <button onclick="updateContent(0)" id="btn-0" style="background-color: #F6931E;"
+                    <button onclick="updateContent(0)" id="btn-0" style="background-color: #F03725;"
                         class="program-btn text-white px-4 py-2 rounded-md font-semibold relative">
                         Infants (0-18 months)
                     </button>
                     <div id="arrow-0"
-                        class="arrow-indicator hidden absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-4 h-4 bg-orange-500 rotate-45" style="background-color: #F6931E;">
+                        class="arrow-indicator hidden absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-4 h-4 bg-orange-500 rotate-45"
+                        style="background-color: #F03725;">
                     </div>
                 </div>
 
                 <div class="relative">
-                    <button onclick="updateContent(1)" id="btn-1" style="background-color: #8DD2D6;"
-                        class="program-btn bg-teal-300 text-white px-4 py-2 rounded-md font-semibold relative">
+                    <button onclick="updateContent(1)" id="btn-1" style="background-color: #F9CE61;"
+                        class="program-btn bg-teal-300 text-black px-4 py-2 rounded-md font-semibold relative">
                         Toddlers (18 months - 3 years)
                     </button>
-                    <div id="arrow-1" style="background-color: #8DD2D6;"
+                    <div id="arrow-1" style="background-color: #F9CE61;"
                         class="arrow-indicator hidden absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-4 h-4 bg-teal-300 rotate-45">
                     </div>
                 </div>
 
                 <div class="relative">
-                    <button onclick="updateContent(2)" id="btn-2" style="background-color: #F03725;"
+                    <button onclick="updateContent(2)" id="btn-2" style="background-color: #796797;"
                         class="program-btn bg-red-500 text-white px-4 py-2 rounded-md font-semibold relative">
                         Pre-Primary (3-5 years)
                     </button>
-                    <div id="arrow-2" style="background-color: #F03725;"
+                    <div id="arrow-2" style="background-color: #796797;"
                         class="arrow-indicator hidden absolute left-1/2 transform -translate-x-1/2 -bottom-2 w-4 h-4 bg-red-500 rotate-45">
                     </div>
                 </div>
 
                 <div class="relative">
                     <button onclick="updateContent(3)" id="btn-3" style="background-color: #8DD2D6;"
-                        class="program-btn bg-teal-300 text-white px-4 py-2 rounded-md font-semibold relative">
+                        class="program-btn bg-teal-300 text-black px-4 py-2 rounded-md font-semibold relative">
                         School Age (5+ years)
                     </button>
                     <div id="arrow-3" style="background-color: #8DD2D6;"
@@ -160,7 +161,7 @@
             </div>
 
             <!-- Content Box (Updates Based on Selection) -->
-            <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 text-blue-500 text-lg leading-relaxed">
+            <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-6 text-gray-600 text-lg leading-relaxed">
                 <p id="program-text">
                     In our infant program, we create a nurturing environment where babies are encouraged to explore the
                     world around them through their senses. Guided by the Montessori principle of the Absorbent Mind,
@@ -173,8 +174,8 @@
 
 
 
-        <section class="relative w-full py-16 px-6 bg-cover bg-center bg-no-repeat"
-            style="background-image: url('img/prog/ourprogram.png');">
+        <section class="relative w-full py-16 px-6 bg-[#796797]">
+
 
             <!-- Dark Overlay -->
             <div class="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -201,7 +202,7 @@
                         <div class="flex items-start gap-6 text-sm">
                             <!-- Icon Container -->
                             <div
-                                class="w-24 h-24 flex-shrink-0 flex items-center justify-center rounded-full border-4 border-white bg-transparent hover:bg-yellow-500 transition duration-300 shadow-lg">
+                                class="w-24 h-24 flex-shrink-0 flex items-center justify-center rounded-full border-4 border-white bg-transparent hover:bg-[#F03725] transition duration-300 shadow-lg">
                                 <img src="img/prog/OUR_PROGRAM_ICONS_SVG/13.svg" alt="Learning Path"
                                     class="w-16 h-16 object-contain">
                             </div>
@@ -221,7 +222,7 @@
                         <div class="flex items-start gap-6 text-sm">
                             <!-- Icon Container -->
                             <div
-                                class="w-24 h-24 flex-shrink-0 flex items-center justify-center rounded-full border-4 border-white bg-transparent hover:bg-yellow-500 transition duration-300 shadow-lg">
+                                class="w-24 h-24 flex-shrink-0 flex items-center justify-center rounded-full border-4 border-white bg-transparent hover:bg-[#F6931E] transition duration-300 shadow-lg">
                                 <img src="img/prog/OUR_PROGRAM_ICONS_SVG/16.svg" alt="Collaboration"
                                     class="w-16 h-16 object-contain">
                             </div>
@@ -248,7 +249,7 @@
                         <div class="flex items-start gap-6">
                             <!-- Icon Container -->
                             <div
-                                class="w-24 h-24 flex-shrink-0 flex items-center justify-center rounded-full border-4 border-white bg-transparent hover:bg-yellow-500 transition duration-300 shadow-lg">
+                                class="w-24 h-24 flex-shrink-0 flex items-center justify-center rounded-full border-4 border-white bg-transparent hover:bg-[#699BD2] transition duration-300 shadow-lg">
                                 <img src="img/prog/OUR_PROGRAM_ICONS_SVG/14.svg" alt="STEM"
                                     class="w-16 h-16 object-contain">
                             </div>
@@ -299,63 +300,67 @@
             <div class="max-w-6xl mx-auto">
                 <!-- Section Title -->
                 <h2 class="text-4xl font-bold text-black mb-10 text-left">Pricing Plan</h2>
-        
+
                 <!-- Pricing Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
+
                     <!-- Full Day Session Card -->
                     <div class="flex bg-white shadow-lg rounded-lg overflow-hidden">
                         <!-- Card Content (Text on Left) -->
                         <div class="w-2/3 p-6 text-left">
-                            <h3 class="text-2xl font-bold text-orange-500">Full Day Session</h3>
+                            <h3 class="text-2xl font-bold text-[#F03725]">Full Day Session</h3>
                             <p class="text-gray-600 mt-2">
-                            
+
                             </p>
-                            
+
                             <ul class="mt-4 space-y-2 text-gray-500">
-                                
+
                             </ul>
-        
-                            <button class="mt-6 px-5 py-2 bg-orange-500 text-white font-semibold rounded-full hover:bg-orange-600 transition">
+
+                            <button
+                                class="mt-6 px-5 py-2 bg-orange-500 text-white font-semibold rounded-full hover:bg-orange-600 transition">
                                 Choose Plan
                             </button>
                         </div>
-        
+
                         <!-- Image Placeholder (Image on Right) -->
                         <div class="w-1/3 bg-gray-300 flex items-center justify-center">
-                            <img src="img/prog/blg6-287x396.jpg" alt="Full Day Image" class="w-full h-full object-cover">
+                            <img src="img/prog/blg6-287x396.jpg" alt="Full Day Image"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
-        
+
                     <!-- Morning Session Card -->
                     <div class="flex bg-white shadow-lg rounded-lg overflow-hidden">
                         <!-- Card Content (Text on Left) -->
                         <div class="w-2/3 p-6 text-left">
-                            <h3 class="text-2xl font-bold text-orange-500">Morning Session</h3>
+                            <h3 class="text-2xl font-bold text-[#F03725]">Morning Session</h3>
                             <p class="text-gray-600 mt-2">
-                            
+
                             </p>
-                            
+
                             <ul class="mt-4 space-y-2 text-gray-500">
-                                
+
                             </ul>
-        
-                            <button class="mt-6 px-5 py-2 bg-orange-500 text-white font-semibold rounded-full hover:bg-orange-600 transition">
+
+                            <button
+                                class="mt-6 px-5 py-2 bg-orange-500 text-white font-semibold rounded-full hover:bg-orange-600 transition">
                                 Choose Plan
                             </button>
                         </div>
-        
+
                         <!-- Image Placeholder (Image on Right) -->
                         <div class="w-1/3 bg-gray-300 flex items-center justify-center">
-                            <img src="img/prog/blg4-287x396.png" alt="Morning Session Image" class="w-full h-full object-cover">
+                            <img src="img/prog/blg4-287x396.png" alt="Morning Session Image"
+                                class="w-full h-full object-cover">
                         </div>
                     </div>
-        
+
                 </div>
             </div>
         </section>
-        
-        
+
+
 
 
 
