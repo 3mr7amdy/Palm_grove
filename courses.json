@@ -7,7 +7,7 @@
         "age_range": "2 - 5",
         "class_size": "26",
         "price": "$69 m/h",
-        "image": "img/ourclasses/sports.jpg",
+        "image": "img/our_currcluim/1.png",
         "description": "Kindergarten, Primary, Stories"
     },
     {
@@ -18,7 +18,7 @@
         "age_range": "3 - 6",
         "class_size": "26",
         "price": "$49 m/h",
-        "image": "img/ourclasses/44-370x270.jpg",
+        "image": "img/our_currcluim/2.png",
         "description": "Kindergarten, Primary, Stories"
     },
     {
@@ -29,7 +29,7 @@
         "age_range": "3 - 6",
         "class_size": "26",
         "price": "$59 m/h",
-        "image": "img/ourclasses/31-370x270.jpg",
+        "image": "img/our_currcluim/3.png",
         "description": "Games, Kindergarten, Sports"
     }
 ]

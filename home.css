@@ -59,10 +59,7 @@ header.scrolled {
 }
 
 /* Logo Adjustments */
-img[alt*="Preschool Logo"] {
-    width: 3rem;
-    height: 3rem;
-}
+
 
 /* Navigation Menu */
 nav ul {
